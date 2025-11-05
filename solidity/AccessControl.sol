@@ -59,7 +59,7 @@ contract PhishingAttacker {
     VulnerableWallet public vulnerableWallet;
     address public attackerAddress;
 
-    constructor(address _vulnerableWalletAddress) {
+    constructor(address payable _vulnerableWalletAddress) {
         vulnerableWallet = VulnerableWallet(_vulnerableWalletAddress);
         attackerAddress = msg.sender;
     }

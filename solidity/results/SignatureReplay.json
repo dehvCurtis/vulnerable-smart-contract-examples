@@ -1,0 +1,945 @@
+Loaded configuration from: .soliditydefend.yml
+╔═══════════════════════════════════════╗
+║       🧙  SOLIDITY DEFEND 🧙          ║
+║    Smart Contract Security Analyzer   ║
+║                v1.2.0                 ║
+╚═══════════════════════════════════════╝
+
+Starting analysis...
+Analyzing: /Users/pwner/Git/vulnerable-smart-contract-examples/solidity/SignatureReplay.sol
+  Found 124 issues
+{
+  "version": "1.2.0",
+  "timestamp": "2025-11-03T04:43:43.656500Z",
+  "findings": [
+    {
+      "detector_id": "missing-access-modifiers",
+      "message": "Function 'metaTransfer' performs critical operations but lacks access control modifiers",
+      "severity": "critical",
+      "location": {
+        "line": 19,
+        "column": 14,
+        "length": 12
+      },
+      "cwe": "CWE-284",
+      "fix_suggestion": {
+        "description": "Add an access control modifier like 'onlyOwner' to function 'metaTransfer'",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "missing-zero-address-check",
+      "message": "Address parameter 'from' in function 'metaTransfer' is not checked for zero address",
+      "severity": "high",
+      "location": {
+        "line": 20,
+        "column": 17,
+        "length": 4
+      },
+      "cwe": "CWE-476",
+      "fix_suggestion": {
+        "description": "Add require(from != address(0), \"Zero address not allowed\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "missing-zero-address-check",
+      "message": "Address parameter 'to' in function 'metaTransfer' is not checked for zero address",
+      "severity": "high",
+      "location": {
+        "line": 21,
+        "column": 17,
+        "length": 2
+      },
+      "cwe": "CWE-476",
+      "fix_suggestion": {
+        "description": "Add require(to != address(0), \"Zero address not allowed\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "parameter-consistency",
+      "message": "Parameter 'to' of type 'address' may need validation",
+      "severity": "high",
+      "location": {
+        "line": 21,
+        "column": 17,
+        "length": 2
+      },
+      "cwe": "CWE-20",
+      "fix_suggestion": {
+        "description": "require(to != address(0), \"Invalid address\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-replay",
+      "message": "Function 'recoverSigner' verifies signatures without replay protection. Attackers can reuse valid signatures to perform unauthorized actions. This is particularly dangerous in governance systems for vote manipulation.",
+      "severity": "high",
+      "location": {
+        "line": 40,
+        "column": 0,
+        "length": 13
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Implement a nonce system to prevent signature replay attacks. Include a unique nonce in the signed message and track used nonces.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "cross-chain-replay",
+      "message": "Function 'metaTransfer' generates hash/signature without chain ID protection. This allows the same signature to be replayed on different chains, potentially draining funds on all supported chains.",
+      "severity": "critical",
+      "location": {
+        "line": 19,
+        "column": 14,
+        "length": 12
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Include 'block.chainid' in the hash calculation for function 'metaTransfer'. Example: keccak256(abi.encodePacked(..., block.chainid))",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-malleability",
+      "message": "Function 'recoverSigner' uses ECDSA signature verification without malleability protection. Uses ecrecover without checking 's' value against secp256k1 curve order ECDSA signatures have two valid forms (s and -s mod n). Without checking that s is in the lower half range, attackers can create alternate valid signatures for replay attacks.",
+      "severity": "high",
+      "location": {
+        "line": 40,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Add signature malleability check in 'recoverSigner'. Use OpenZeppelin's ECDSA library or add: `require(uint256(s) <= 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0, \"Invalid signature 's' value\");` This ensures s is in the lower half of the curve order.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "excessive-gas-usage",
+      "message": "Function 'metaTransfer' contains excessive gas usage pattern. Multiple storage reads detected (7). Cache in memory variable to save gas Excessive gas usage increases transaction costs and may cause out-of-gas errors.",
+      "severity": "low",
+      "location": {
+        "line": 19,
+        "column": 14,
+        "length": 12
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Optimize gas usage in 'metaTransfer'. Consider: (1) Move storage operations outside loops, (2) Cache storage reads in memory, (3) Use events instead of storage for historical data, (4) Pack struct variables efficiently, (5) Use memory arrays for temporary data.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "inefficient-storage",
+      "message": "Inefficient storage pattern detected. Small uint type as standalone storage variable. Use uint256 or pack with other variables Inefficient storage layout increases gas costs for all state-modifying operations.",
+      "severity": "low",
+      "location": {
+        "line": 45,
+        "column": 0,
+        "length": 30
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Optimize storage layout. Consider: (1) Pack variables <32 bytes together in structs, (2) Order struct fields by size (largest to smallest), (3) Use uint256 instead of smaller types for standalone variables, (4) Combine boolean flags into a single uint256 bitmap, (5) Use constants/immutables for unchanging values.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "inefficient-storage",
+      "message": "Inefficient storage pattern detected. Small uint type as standalone storage variable. Use uint256 or pack with other variables Inefficient storage layout increases gas costs for all state-modifying operations.",
+      "severity": "low",
+      "location": {
+        "line": 93,
+        "column": 0,
+        "length": 30
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Optimize storage layout. Consider: (1) Pack variables <32 bytes together in structs, (2) Order struct fields by size (largest to smallest), (3) Use uint256 instead of smaller types for standalone variables, (4) Combine boolean flags into a single uint256 bitmap, (5) Use constants/immutables for unchanging values.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "inefficient-storage",
+      "message": "Inefficient storage pattern detected. Small uint type as standalone storage variable. Use uint256 or pack with other variables Inefficient storage layout increases gas costs for all state-modifying operations.",
+      "severity": "low",
+      "location": {
+        "line": 141,
+        "column": 0,
+        "length": 30
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Optimize storage layout. Consider: (1) Pack variables <32 bytes together in structs, (2) Order struct fields by size (largest to smallest), (3) Use uint256 instead of smaller types for standalone variables, (4) Combine boolean flags into a single uint256 bitmap, (5) Use constants/immutables for unchanging values.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "inefficient-storage",
+      "message": "Inefficient storage pattern detected. Small uint type as standalone storage variable. Use uint256 or pack with other variables Inefficient storage layout increases gas costs for all state-modifying operations.",
+      "severity": "low",
+      "location": {
+        "line": 186,
+        "column": 0,
+        "length": 30
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Optimize storage layout. Consider: (1) Pack variables <32 bytes together in structs, (2) Order struct fields by size (largest to smallest), (3) Use uint256 instead of smaller types for standalone variables, (4) Combine boolean flags into a single uint256 bitmap, (5) Use constants/immutables for unchanging values.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "inefficient-storage",
+      "message": "Inefficient storage pattern detected. Function 'metaTransfer' reads same storage variable multiple times. Cache in memory Inefficient storage layout increases gas costs for all state-modifying operations.",
+      "severity": "low",
+      "location": {
+        "line": 19,
+        "column": 0,
+        "length": 30
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Optimize storage layout. Consider: (1) Pack variables <32 bytes together in structs, (2) Order struct fields by size (largest to smallest), (3) Use uint256 instead of smaller types for standalone variables, (4) Combine boolean flags into a single uint256 bitmap, (5) Use constants/immutables for unchanging values.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "erc20-transfer-return-bomb",
+      "message": "Token transfer lacks return data size validation - vulnerable to return bomb DOS",
+      "severity": "medium",
+      "location": {
+        "line": 1,
+        "column": 1,
+        "length": 6915
+      },
+      "fix_suggestion": {
+        "description": "Check returndatasize() and reject if excessive (>64 bytes): require(returndatasize() <= 64)",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "erc20-transfer-return-bomb",
+      "message": "Low-level call to token without gas limit - return bomb can exhaust all gas",
+      "severity": "medium",
+      "location": {
+        "line": 1,
+        "column": 1,
+        "length": 6915
+      },
+      "fix_suggestion": {
+        "description": "Specify gas limit for calls: token.call{gas: 100000}(abi.encodeWithSelector(...))",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "cross-rollup-atomicity",
+      "message": "Cross-rollup operation lacks atomicity guarantee - partial execution possible",
+      "severity": "critical",
+      "location": {
+        "line": 1,
+        "column": 1,
+        "length": 6915
+      },
+      "fix_suggestion": {
+        "description": "Implement two-phase commit or rollback mechanism",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "floating-pragma",
+      "message": "Floating pragma detected: pragma solidity ^0.8.0;. Using '^' allows compilation with multiple compiler versions, which may introduce unexpected behavior or security vulnerabilities. Different compiler versions may have different bugs, optimizations, or security fixes.",
+      "severity": "low",
+      "location": {
+        "line": 2,
+        "column": 0,
+        "length": 23
+      },
+      "cwe": "CWE-710",
+      "fix_suggestion": {
+        "description": "Lock pragma to specific version: 'pragma solidity 0.8.0;'. This ensures consistent compilation across environments and prevents unexpected behavior from compiler version differences.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "multisig-bypass",
+      "message": "Missing signature malleability protection (duplicate signature acceptance)",
+      "severity": "high",
+      "location": {
+        "line": 0,
+        "column": 0,
+        "length": 20
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Check s-value: require(uint256(s) <= 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0, \"Invalid s-value\"); This prevents signature malleability.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "multisig-bypass",
+      "message": "Missing domain separator in signature hash (cross-contract/chain replay)",
+      "severity": "medium",
+      "location": {
+        "line": 0,
+        "column": 0,
+        "length": 20
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Include domain separator: bytes32 domainSeparator = keccak256(abi.encode(TYPEHASH, address(this), block.chainid)); bytes32 hash = keccak256(abi.encodePacked(domainSeparator, data));",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "multisig-bypass",
+      "message": "Signatures without expiration/deadline (indefinite validity risk)",
+      "severity": "medium",
+      "location": {
+        "line": 0,
+        "column": 0,
+        "length": 20
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Add expiration: Include deadline in signature data; require(block.timestamp <= deadline, \"Signature expired\"); Prevents execution of stale signatures.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "eip7702-storage-collision",
+      "message": "EIP-7702 delegate uses storage - verify no collision with EOA state",
+      "severity": "medium",
+      "location": {
+        "line": 1,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "Use EIP-7201 namespaced storage to avoid collisions:\n\nbytes32 private constant STORAGE_LOCATION = \nkeccak256(\"myprotocol.delegate.storage\");\n\nstruct DelegateStorage {\naddress owner;\nmapping(address => uint256) balances;\n}\n\nfunction _getStorage() private pure returns (DelegateStorage storage $) {\nassembly { $.slot := STORAGE_LOCATION }\n}",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "logic-error-patterns",
+      "message": "Potential division before multiplication - causes precision loss (OWASP 2025)",
+      "severity": "high",
+      "location": {
+        "line": 1,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "❌ PRECISION LOSS ($63.8M in losses):\nuint256 reward = (amount / totalSupply) * rewardRate;\n// Result: 0 if amount < totalSupply!\n\n✅ CORRECT ORDER:\nuint256 reward = (amount * rewardRate) / totalSupply;\n// Maximizes precision, multiply before divide\n\n✅ BEST: Use fixed-point math:\nuint256 reward = (amount * rewardRate * 1e18) / totalSupply / 1e18;\n\nReal incidents:\n- Cork Protocol: $11M (May 2025) - Division rounding\n- SIR.trading: $355K (March 2025) - Reward calculation\n- Multiple 2024 incidents: $63.8M total",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "enhanced-input-validation",
+      "message": "Transfer function without zero-value check - validate non-zero amounts",
+      "severity": "medium",
+      "location": {
+        "line": 1,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "❌ MISSING ZERO-VALUE CHECK:\nfunction transfer(address to, uint256 amount) external {\n_transfer(msg.sender, to, amount);\n// What if amount is 0? Wastes gas, may break accounting\n}\n\n✅ VALIDATE NON-ZERO:\nfunction transfer(address to, uint256 amount) external {\nrequire(amount > 0, \"Zero amount\");\nrequire(to != address(0), \"Zero address\");\n_transfer(msg.sender, to, amount);\n}\n\n✅ COMPLETE VALIDATION:\nfunction deposit(uint256 amount) external payable {\n// For ERC20 deposits\nrequire(amount > 0, \"Zero amount\");\nrequire(amount <= MAX_DEPOSIT, \"Exceeds maximum\");\n\n// For native ETH deposits\nif (msg.value > 0) {\nrequire(msg.value == amount, \"Value mismatch\");\n}\n\n// Proceed with deposit\n}",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "enhanced-input-validation",
+      "message": "Address parameter without zero-address validation",
+      "severity": "medium",
+      "location": {
+        "line": 1,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "❌ MISSING ADDRESS VALIDATION:\nfunction setOwner(address newOwner) external {\nowner = newOwner;  // What if newOwner is address(0)?\n}\n\n✅ VALIDATE ADDRESS:\nfunction setOwner(address newOwner) external onlyOwner {\nrequire(newOwner != address(0), \"Zero address\");\nrequire(newOwner != owner, \"Same address\");\nowner = newOwner;\n}\n\n✅ VALIDATE MULTIPLE ADDRESSES:\nfunction initialize(\naddress _token,\naddress _oracle,\naddress _treasury\n) external {\nrequire(_token != address(0), \"Zero token\");\nrequire(_oracle != address(0), \"Zero oracle\");\nrequire(_treasury != address(0), \"Zero treasury\");\n\n// Check for duplicates if needed\nrequire(_token != _oracle, \"Token == oracle\");\nrequire(_token != _treasury, \"Token == treasury\");\n\ntoken = _token;\noracle = _oracle;\ntreasury = _treasury;\n}",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "post-080-overflow",
+      "message": "Assembly arithmetic detected - no overflow protection! ($223M Cetus DEX)",
+      "severity": "high",
+      "location": {
+        "line": 1,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "🚨 CRITICAL: Assembly has NO overflow protection!\n\nReal incident: Cetus DEX - $223M loss (May 2025)\nCause: Assembly arithmetic overflow\n\n❌ VULNERABLE (Cetus-style vulnerability):\nassembly {\nlet result := add(a, b)  // NO OVERFLOW CHECK!\nlet product := mul(x, y) // NO OVERFLOW CHECK!\nmstore(0x00, result)\n}\n\n✅ SOLUTION 1 - Add manual checks:\nassembly {\nlet result := add(a, b)\n// Manual overflow check\nif lt(result, a) {\nrevert(0, 0)  // Overflow detected\n}\n}\n\n✅ SOLUTION 2 - Use Solidity instead:\n// Let Solidity handle overflow checks\nuint256 result = a + b;  // Automatic overflow check\n\n✅ SOLUTION 3 - SafeMath for assembly:\nfunction safeAdd(uint256 a, uint256 b) internal pure returns (uint256) {\nuint256 c;\nassembly {\nc := add(a, b)\n}\nrequire(c >= a, \"Overflow\");  // Check outside assembly\nreturn c;\n}\n\nAssembly arithmetic operations with NO checks:\n- add(a, b)     → wraps on overflow\n- sub(a, b)     → wraps on underflow\n- mul(a, b)     → wraps on overflow\n- div(a, b)     → returns 0 if b is 0 (no revert!)\n\n⚠️ Only use assembly arithmetic when absolutely necessary\nand with manual overflow checks!",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "post-080-overflow",
+      "message": "Type casting to smaller uint - verify no overflow on downcast",
+      "severity": "low",
+      "location": {
+        "line": 1,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "Downcasting can silently overflow even in Solidity 0.8.0+!\n\n❌ UNSAFE DOWNCAST:\nuint256 bigValue = 1000;\nuint8 smallValue = uint8(bigValue);  // Wraps to 232! (1000 % 256)\n\n✅ SAFE DOWNCAST with validation:\nuint256 bigValue = 1000;\nrequire(bigValue <= type(uint8).max, \"Value too large\");\nuint8 smallValue = uint8(bigValue);  // Safe now\n\n✅ USE SafeCast library (OpenZeppelin):\nimport \"@openzeppelin/contracts/utils/math/SafeCast.sol\";\n\nuint256 bigValue = 1000;\nuint8 smallValue = SafeCast.toUint8(bigValue);  // Reverts if > 255\n\nType limits:\n- uint8:   0 to 255\n- uint16:  0 to 65,535\n- uint32:  0 to 4,294,967,295\n- uint64:  0 to 18,446,744,073,709,551,615\n- uint256: 0 to 2^256-1",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "jit-liquidity-sandwich",
+      "message": "Liquidity becomes active immediately - may enable JIT sandwich attacks",
+      "severity": "high",
+      "location": {
+        "line": 1,
+        "column": 1,
+        "length": 6915
+      },
+      "fix_suggestion": {
+        "description": "Consider delaying liquidity activation to the next epoch or block to mitigate JIT attacks",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "pool-donation-enhanced",
+      "message": "No minimum deposit requirement - small deposits may round down to zero shares",
+      "severity": "high",
+      "location": {
+        "line": 1,
+        "column": 1,
+        "length": 6915
+      },
+      "fix_suggestion": {
+        "description": "Enforce minimum deposit amount or minimum shares minted to prevent rounding attacks",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "pool-donation-enhanced",
+      "message": "Pool initialization lacks protection - first depositor can manipulate initial share price",
+      "severity": "high",
+      "location": {
+        "line": 1,
+        "column": 1,
+        "length": 6915
+      },
+      "fix_suggestion": {
+        "description": "Require minimum initial deposit, mint dead shares on initialization, or use time-delayed activation",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "invalid-state-transition",
+      "message": "State variables modified after external call - potential reentrancy affecting state machine",
+      "severity": "critical",
+      "location": {
+        "line": 81,
+        "column": 9,
+        "length": 36
+      },
+      "cwe": "CWE-841",
+      "fix_suggestion": {
+        "description": "Use checks-effects-interactions pattern or reentrancy guards",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "parameter-consistency",
+      "message": "Parameter 'amount' of type 'uint' may need validation",
+      "severity": "low",
+      "location": {
+        "line": 69,
+        "column": 17,
+        "length": 6
+      },
+      "cwe": "CWE-20",
+      "fix_suggestion": {
+        "description": "require(amount > 0, \"Amount must be positive\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "unchecked-external-call",
+      "message": "External call in function 'redeemVoucher' does not check return value",
+      "severity": "medium",
+      "location": {
+        "line": 68,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-252",
+      "fix_suggestion": {
+        "description": "Check the return value of external calls in function 'redeemVoucher'",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-replay",
+      "message": "Function 'recoverSigner' verifies signatures without replay protection. Attackers can reuse valid signatures to perform unauthorized actions. This is particularly dangerous in governance systems for vote manipulation.",
+      "severity": "high",
+      "location": {
+        "line": 88,
+        "column": 0,
+        "length": 13
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Implement a nonce system to prevent signature replay attacks. Include a unique nonce in the signed message and track used nonces.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "cross-chain-replay",
+      "message": "Function 'redeemVoucher' generates hash/signature without chain ID protection. This allows the same signature to be replayed on different chains, potentially draining funds on all supported chains.",
+      "severity": "critical",
+      "location": {
+        "line": 68,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Include 'block.chainid' in the hash calculation for function 'redeemVoucher'. Example: keccak256(abi.encodePacked(..., block.chainid))",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-malleability",
+      "message": "Function 'recoverSigner' uses ECDSA signature verification without malleability protection. Uses ecrecover without checking 's' value against secp256k1 curve order ECDSA signatures have two valid forms (s and -s mod n). Without checking that s is in the lower half range, attackers can create alternate valid signatures for replay attacks.",
+      "severity": "high",
+      "location": {
+        "line": 88,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Add signature malleability check in 'recoverSigner'. Use OpenZeppelin's ECDSA library or add: `require(uint256(s) <= 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0, \"Invalid signature 's' value\");` This ensures s is in the lower half of the curve order.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "vault-withdrawal-dos",
+      "message": "Function 'redeemVoucher' may be vulnerable to withdrawal DOS attack. Withdrawal requires successful external call. Failing calls can permanently block withdrawals. Consider using pull-over-push pattern Attacker can block withdrawals, causing funds to be locked indefinitely.",
+      "severity": "high",
+      "location": {
+        "line": 68,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Protect 'redeemVoucher' from withdrawal DOS. Solutions: (1) Implement withdrawal limits/caps per transaction (e.g., maxWithdrawal), (2) Add circuit breakers for emergency withdrawals (OpenZeppelin Pausable), (3) Avoid unbounded loops in withdrawal queue processing (add MAX_ITERATIONS), (4) Implement partial withdrawal support for queue processing, (5) Use pull-over-push pattern for failed withdrawals (mapping-based claims), (6) Consider EigenLayer-style withdrawal queue with delay mechanisms, (7) Add emergency pause mechanism for DOS situations, (8) Implement timelock for critical parameter changes.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "vault-hook-reentrancy",
+      "message": "Function 'redeemVoucher' may be vulnerable to hook reentrancy attack. Uses raw transfer() instead of SafeERC20. No protection against malicious token implementations with callback hooks ERC-777/ERC-1363 token callbacks can re-enter and manipulate vault state.",
+      "severity": "high",
+      "location": {
+        "line": 68,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-841",
+      "fix_suggestion": {
+        "description": "Protect 'redeemVoucher' from hook reentrancy. Solutions: (1) Add nonReentrant modifier from OpenZeppelin ReentrancyGuard, (2) Follow checks-effects-interactions (CEI) pattern strictly, (3) Update state BEFORE external calls with callbacks, (4) Validate token doesn't implement hooks (ERC-777/ERC-1363/callbacks), (5) Use reentrancy guard on all vault entry points, (6) Consider EIP-1153 transient storage for gas-efficient protection (Solidity 0.8.24+), (7) Use SafeERC20 wrapper library for token operations.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "mev-extractable-value",
+      "message": "Function 'redeemVoucher' has extractable MEV. Public function with value transfer lacks MEV protection (no slippage/deadline checks), enabling front-running and back-running attacks Searchers can extract value through transaction ordering, front-running, or back-running.",
+      "severity": "high",
+      "location": {
+        "line": 68,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-362",
+      "fix_suggestion": {
+        "description": "Reduce MEV extractability in 'redeemVoucher'. Implement: (1) Commit-reveal schemes, (2) Batch processing/auctions, (3) Private transaction pools (Flashbots), (4) Time-weighted mechanisms, (5) MEV-resistant AMM curves, (6) Encrypted mempools.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "gas-griefing",
+      "message": "Function 'redeemVoucher' has gas griefing vulnerability. Transfer without gas stipend, recipient can grief by consuming gas in fallback Attackers can force users to waste gas or cause transactions to fail.",
+      "severity": "medium",
+      "location": {
+        "line": 68,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-400",
+      "fix_suggestion": {
+        "description": "Mitigate gas griefing in 'redeemVoucher'. Use pull pattern for transfers, limit array sizes, add gas stipends, implement gas-efficient loops, avoid unbounded operations, use OpenZeppelin SafeERC20.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "insufficient-randomness",
+      "message": "Function 'redeemVoucher' uses weak randomness source. Uses user address in randomness without commitment scheme. Users can predict outcomes and selectively participate Predictable randomness enables attackers to manipulate outcomes in lotteries, games, or selection processes.",
+      "severity": "high",
+      "location": {
+        "line": 68,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-338",
+      "fix_suggestion": {
+        "description": "Use secure randomness in 'redeemVoucher'. Implement: (1) Chainlink VRF for verifiable randomness, (2) Commit-reveal scheme with multi-block delay, (3) External oracle for random number generation, (4) Avoid block.timestamp, blockhash, or block.number, (5) Use Randao for Ethereum 2.0.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "missing-zero-address-check",
+      "message": "Address parameter 'target' in function 'executeWithSignature' is not checked for zero address",
+      "severity": "high",
+      "location": {
+        "line": 114,
+        "column": 17,
+        "length": 6
+      },
+      "cwe": "CWE-476",
+      "fix_suggestion": {
+        "description": "Add require(target != address(0), \"Zero address not allowed\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "parameter-consistency",
+      "message": "Parameter 'value' of type 'uint' may need validation",
+      "severity": "low",
+      "location": {
+        "line": 115,
+        "column": 17,
+        "length": 5
+      },
+      "cwe": "CWE-20",
+      "fix_suggestion": {
+        "description": "Add appropriate range validation for value",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "test-governance",
+      "message": "Function 'executeWithSignature' lacks time-delay protection for governance actions. New token holders can immediately use their voting power, enabling flash loan governance attacks.",
+      "severity": "medium",
+      "location": {
+        "line": 113,
+        "column": 0,
+        "length": 20
+      },
+      "cwe": "CWE-662",
+      "fix_suggestion": {
+        "description": "Implement time-delayed voting rights requiring minimum holding periods.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-replay",
+      "message": "Function 'recoverSigner' verifies signatures without replay protection. Attackers can reuse valid signatures to perform unauthorized actions. This is particularly dangerous in governance systems for vote manipulation.",
+      "severity": "high",
+      "location": {
+        "line": 136,
+        "column": 0,
+        "length": 13
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Implement a nonce system to prevent signature replay attacks. Include a unique nonce in the signed message and track used nonces.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "cross-chain-replay",
+      "message": "Function 'executeWithSignature' generates hash/signature without chain ID protection. This allows the same signature to be replayed on different chains, potentially draining funds on all supported chains.",
+      "severity": "critical",
+      "location": {
+        "line": 113,
+        "column": 14,
+        "length": 20
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Include 'block.chainid' in the hash calculation for function 'executeWithSignature'. Example: keccak256(abi.encodePacked(..., block.chainid))",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-malleability",
+      "message": "Function 'recoverSigner' uses ECDSA signature verification without malleability protection. Uses ecrecover without checking 's' value against secp256k1 curve order ECDSA signatures have two valid forms (s and -s mod n). Without checking that s is in the lower half range, attackers can create alternate valid signatures for replay attacks.",
+      "severity": "high",
+      "location": {
+        "line": 136,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Add signature malleability check in 'recoverSigner'. Use OpenZeppelin's ECDSA library or add: `require(uint256(s) <= 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0, \"Invalid signature 's' value\");` This ensures s is in the lower half of the curve order.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "mev-extractable-value",
+      "message": "Function 'executeWithSignature' has extractable MEV. Public function with value transfer lacks MEV protection (no slippage/deadline checks), enabling front-running and back-running attacks Searchers can extract value through transaction ordering, front-running, or back-running.",
+      "severity": "high",
+      "location": {
+        "line": 113,
+        "column": 14,
+        "length": 20
+      },
+      "cwe": "CWE-362",
+      "fix_suggestion": {
+        "description": "Reduce MEV extractability in 'executeWithSignature'. Implement: (1) Commit-reveal schemes, (2) Batch processing/auctions, (3) Private transaction pools (Flashbots), (4) Time-weighted mechanisms, (5) MEV-resistant AMM curves, (6) Encrypted mempools.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "circular-dependency",
+      "message": "Function 'executeWithSignature' has circular dependency vulnerability. External contract calls without depth limit, circular calls can cause stack overflow Circular dependencies can cause stack overflow, DOS attacks, or make contracts unupgradeable.",
+      "severity": "high",
+      "location": {
+        "line": 113,
+        "column": 14,
+        "length": 20
+      },
+      "cwe": "CWE-674",
+      "fix_suggestion": {
+        "description": "Break circular dependency in 'executeWithSignature'. Use events instead of callbacks, implement depth limits for recursive calls, add reentrancy guards, use pull pattern instead of push, implement circuit breakers, and add visited tracking for graph traversal.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "eip7702-delegate-access-control",
+      "message": "Missing access control in 'executeWithSignature' - allows arbitrary execution",
+      "severity": "critical",
+      "location": {
+        "line": 113,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "Fix: Add owner/authorization check:\n\naddress public owner;\n\nfunction execute(address target, bytes calldata data) external payable {\nrequire(msg.sender == owner, \"Not authorized\");\n(bool success, ) = target.call{value: msg.value}(data);\nrequire(success, \"Call failed\");\n}",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "missing-zero-address-check",
+      "message": "Address parameter 'user' in function 'executeMetaTransaction' is not checked for zero address",
+      "severity": "medium",
+      "location": {
+        "line": 162,
+        "column": 17,
+        "length": 4
+      },
+      "cwe": "CWE-476",
+      "fix_suggestion": {
+        "description": "Add require(user != address(0), \"Zero address not allowed\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "missing-zero-address-check",
+      "message": "Address parameter 'target' in function 'executeMetaTransaction' is not checked for zero address",
+      "severity": "high",
+      "location": {
+        "line": 163,
+        "column": 17,
+        "length": 6
+      },
+      "cwe": "CWE-476",
+      "fix_suggestion": {
+        "description": "Add require(target != address(0), \"Zero address not allowed\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "parameter-consistency",
+      "message": "Parameter 'target' of type 'address' may need validation",
+      "severity": "low",
+      "location": {
+        "line": 163,
+        "column": 17,
+        "length": 6
+      },
+      "cwe": "CWE-20",
+      "fix_suggestion": {
+        "description": "require(target != address(0), \"Invalid address\");",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "parameter-consistency",
+      "message": "Parameter 'value' of type 'uint' may need validation",
+      "severity": "low",
+      "location": {
+        "line": 164,
+        "column": 17,
+        "length": 5
+      },
+      "cwe": "CWE-20",
+      "fix_suggestion": {
+        "description": "Add appropriate range validation for value",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "test-governance",
+      "message": "Function 'executeMetaTransaction' lacks time-delay protection for governance actions. New token holders can immediately use their voting power, enabling flash loan governance attacks.",
+      "severity": "medium",
+      "location": {
+        "line": 161,
+        "column": 0,
+        "length": 22
+      },
+      "cwe": "CWE-662",
+      "fix_suggestion": {
+        "description": "Implement time-delayed voting rights requiring minimum holding periods.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-replay",
+      "message": "Function 'recoverSigner' verifies signatures without replay protection. Attackers can reuse valid signatures to perform unauthorized actions. This is particularly dangerous in governance systems for vote manipulation.",
+      "severity": "high",
+      "location": {
+        "line": 181,
+        "column": 0,
+        "length": 13
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Implement a nonce system to prevent signature replay attacks. Include a unique nonce in the signed message and track used nonces.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "cross-chain-replay",
+      "message": "Function 'executeMetaTransaction' generates hash/signature without chain ID protection. This allows the same signature to be replayed on different chains, potentially draining funds on all supported chains.",
+      "severity": "critical",
+      "location": {
+        "line": 161,
+        "column": 14,
+        "length": 22
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Include 'block.chainid' in the hash calculation for function 'executeMetaTransaction'. Example: keccak256(abi.encodePacked(..., block.chainid))",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "signature-malleability",
+      "message": "Function 'recoverSigner' uses ECDSA signature verification without malleability protection. Uses ecrecover without checking 's' value against secp256k1 curve order ECDSA signatures have two valid forms (s and -s mod n). Without checking that s is in the lower half range, attackers can create alternate valid signatures for replay attacks.",
+      "severity": "high",
+      "location": {
+        "line": 181,
+        "column": 14,
+        "length": 13
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Add signature malleability check in 'recoverSigner'. Use OpenZeppelin's ECDSA library or add: `require(uint256(s) <= 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0, \"Invalid signature 's' value\");` This ensures s is in the lower half of the curve order.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "mev-extractable-value",
+      "message": "Function 'executeMetaTransaction' has extractable MEV. Public function with value transfer lacks MEV protection (no slippage/deadline checks), enabling front-running and back-running attacks Searchers can extract value through transaction ordering, front-running, or back-running.",
+      "severity": "high",
+      "location": {
+        "line": 161,
+        "column": 14,
+        "length": 22
+      },
+      "cwe": "CWE-362",
+      "fix_suggestion": {
+        "description": "Reduce MEV extractability in 'executeMetaTransaction'. Implement: (1) Commit-reveal schemes, (2) Batch processing/auctions, (3) Private transaction pools (Flashbots), (4) Time-weighted mechanisms, (5) MEV-resistant AMM curves, (6) Encrypted mempools.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "nonce-reuse",
+      "message": "Function 'executeMetaTransaction' has nonce management vulnerability. Uses global nonce instead of per-user mapping, forces sequential execution and limits parallelization Improper nonce handling enables replay attacks or transaction reordering exploits.",
+      "severity": "medium",
+      "location": {
+        "line": 161,
+        "column": 14,
+        "length": 22
+      },
+      "cwe": "CWE-294",
+      "fix_suggestion": {
+        "description": "Fix nonce management in 'executeMetaTransaction'. Increment nonce after validation, use mapping(address => uint256) for per-user nonces, validate nonce before execution, include nonce in signature hash, and implement nonce cancellation mechanism.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "circular-dependency",
+      "message": "Function 'executeMetaTransaction' has circular dependency vulnerability. External contract calls without depth limit, circular calls can cause stack overflow Circular dependencies can cause stack overflow, DOS attacks, or make contracts unupgradeable.",
+      "severity": "high",
+      "location": {
+        "line": 161,
+        "column": 14,
+        "length": 22
+      },
+      "cwe": "CWE-674",
+      "fix_suggestion": {
+        "description": "Break circular dependency in 'executeMetaTransaction'. Use events instead of callbacks, implement depth limits for recursive calls, add reentrancy guards, use pull pattern instead of push, implement circuit breakers, and add visited tracking for graph traversal.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "eip7702-delegate-access-control",
+      "message": "Missing access control in 'executeMetaTransaction' - allows arbitrary execution",
+      "severity": "critical",
+      "location": {
+        "line": 161,
+        "column": 0,
+        "length": 20
+      },
+      "fix_suggestion": {
+        "description": "Fix: Add owner/authorization check:\n\naddress public owner;\n\nfunction execute(address target, bytes calldata data) external payable {\nrequire(msg.sender == owner, \"Not authorized\");\n(bool success, ) = target.call{value: msg.value}(data);\nrequire(success, \"Call failed\");\n}",
+        "replacements": []
+      }
+    }
+  ],
+  "metadata": {
+    "tool_name": "SolidityDefend",
+    "tool_version": "1.2.0",
+    "scan_type": "static_analysis",
+    "language": "solidity",
+    "rules_version": "1.2.0"
+  },
+  "statistics": {
+    "total_findings": 61,
+    "severity_counts": {
+      "medium": 13,
+      "critical": 9,
+      "low": 12,
+      "high": 27,
+      "info": 0
+    },
+    "unique_detectors": 29
+  }
+}
+
+Analysis complete:
+  Files analyzed: 1
+  Successful: 1
+  Issues found: 61
+  Duplicates removed: 63
+  Time taken: 0.03s
+
+Exiting with code 1 due to:
+  - Found high or critical severity issues
