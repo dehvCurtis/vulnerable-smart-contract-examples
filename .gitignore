@@ -1,1 +1,17 @@
 .claude
+
+# Dependencies
+node_modules/
+
+# Foundry
+out/
+cache/
+broadcast/
+
+# Hardhat
+artifacts/
+typechain-types/
+
+# Build artifacts
+*.zip
+.DS_Store
