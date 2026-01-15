@@ -1,0 +1,11 @@
+{
+  "name": "hardhat-test-project",
+  "version": "1.0.0",
+  "description": "Test project for SolidityBOM",
+  "devDependencies": {
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
