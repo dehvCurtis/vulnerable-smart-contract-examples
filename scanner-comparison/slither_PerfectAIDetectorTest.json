@@ -1,0 +1,221 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeAIDecision",
+            "source_mapping": {
+              "start": 560,
+              "length": 157,
+              "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+              "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+              "is_dependency": false,
+              "lines": [
+                16,
+                17,
+                18,
+                19
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TestAIDecisionManipulation",
+                "source_mapping": {
+                  "start": 473,
+                  "length": 246,
+                  "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+                  "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "executeAIDecision(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(msg.sender).transfer(amount)",
+            "source_mapping": {
+              "start": 674,
+              "length": 36,
+              "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+              "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+              "is_dependency": false,
+              "lines": [
+                18
+              ],
+              "starting_column": 9,
+              "ending_column": 45
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeAIDecision",
+                "source_mapping": {
+                  "start": 560,
+                  "length": 157,
+                  "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+                  "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    16,
+                    17,
+                    18,
+                    19
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TestAIDecisionManipulation",
+                    "source_mapping": {
+                      "start": 473,
+                      "length": 246,
+                      "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+                      "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "executeAIDecision(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "TestAIDecisionManipulation.executeAIDecision(uint256) (ai-agents/PerfectAIDetectorTest.sol#16-19) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(msg.sender).transfer(amount) (ai-agents/PerfectAIDetectorTest.sol#18)\n",
+        "markdown": "[TestAIDecisionManipulation.executeAIDecision(uint256)](ai-agents/PerfectAIDetectorTest.sol#L16-L19) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(msg.sender).transfer(amount)](ai-agents/PerfectAIDetectorTest.sol#L18)\n",
+        "first_markdown_element": "ai-agents/PerfectAIDetectorTest.sol#L16-L19",
+        "id": "2ac61393a1e3cbb53d1a95064c7f85821aebadfca9ef68d1ea153199e034130f",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.20",
+            "source_mapping": {
+              "start": 32,
+              "length": 24,
+              "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+              "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".20"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- ^0.8.20 (ai-agents/PerfectAIDetectorTest.sol#2)\n",
+        "markdown": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- [^0.8.20](ai-agents/PerfectAIDetectorTest.sol#L2)\n",
+        "first_markdown_element": "ai-agents/PerfectAIDetectorTest.sol#L2",
+        "id": "2824285ba1513000cf1d4248c3b56bef0c4704905c9c57e3ebe92712d3746df5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "priceSource",
+            "source_mapping": {
+              "start": 2085,
+              "length": 26,
+              "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+              "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+              "is_dependency": false,
+              "lines": [
+                57
+              ],
+              "starting_column": 5,
+              "ending_column": 31
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TestAutonomousOracle",
+                "source_mapping": {
+                  "start": 2049,
+                  "length": 305,
+                  "filename_relative": "ai-agents/PerfectAIDetectorTest.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/PerfectAIDetectorTest.sol",
+                  "filename_short": "ai-agents/PerfectAIDetectorTest.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "TestAutonomousOracle.priceSource (ai-agents/PerfectAIDetectorTest.sol#57) should be constant \n",
+        "markdown": "[TestAutonomousOracle.priceSource](ai-agents/PerfectAIDetectorTest.sol#L57) should be constant \n",
+        "first_markdown_element": "ai-agents/PerfectAIDetectorTest.sol#L57",
+        "id": "181fdc76b29d1350af1cbd367238cad5eba99ab09a04a830f56617a63f137211",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

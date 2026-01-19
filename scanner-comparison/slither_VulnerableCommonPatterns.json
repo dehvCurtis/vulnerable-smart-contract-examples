@@ -1,0 +1,4636 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeWithSignature",
+            "source_mapping": {
+              "start": 6288,
+              "length": 522,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                175,
+                176,
+                177,
+                178,
+                179,
+                180,
+                181,
+                182,
+                183,
+                184,
+                185,
+                186,
+                187,
+                188,
+                189,
+                190,
+                191
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableSignatureMalleability",
+                "source_mapping": {
+                  "start": 6138,
+                  "length": 1045,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    171,
+                    172,
+                    173,
+                    174,
+                    175,
+                    176,
+                    177,
+                    178,
+                    179,
+                    180,
+                    181,
+                    182,
+                    183,
+                    184,
+                    185,
+                    186,
+                    187,
+                    188,
+                    189,
+                    190,
+                    191,
+                    192,
+                    193,
+                    194,
+                    195,
+                    196,
+                    197,
+                    198,
+                    199,
+                    200,
+                    201,
+                    202,
+                    203,
+                    204,
+                    205,
+                    206
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "executeWithSignature(address,uint256,uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(to).transfer(amount)",
+            "source_mapping": {
+              "start": 6775,
+              "length": 28,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                190
+              ],
+              "starting_column": 9,
+              "ending_column": 37
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeWithSignature",
+                "source_mapping": {
+                  "start": 6288,
+                  "length": 522,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    175,
+                    176,
+                    177,
+                    178,
+                    179,
+                    180,
+                    181,
+                    182,
+                    183,
+                    184,
+                    185,
+                    186,
+                    187,
+                    188,
+                    189,
+                    190,
+                    191
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableSignatureMalleability",
+                    "source_mapping": {
+                      "start": 6138,
+                      "length": 1045,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        171,
+                        172,
+                        173,
+                        174,
+                        175,
+                        176,
+                        177,
+                        178,
+                        179,
+                        180,
+                        181,
+                        182,
+                        183,
+                        184,
+                        185,
+                        186,
+                        187,
+                        188,
+                        189,
+                        190,
+                        191,
+                        192,
+                        193,
+                        194,
+                        195,
+                        196,
+                        197,
+                        198,
+                        199,
+                        200,
+                        201,
+                        202,
+                        203,
+                        204,
+                        205,
+                        206
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "executeWithSignature(address,uint256,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableSignatureMalleability.executeWithSignature(address,uint256,uint256,bytes) (common-patterns/VulnerableCommonPatterns.sol#175-191) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(to).transfer(amount) (common-patterns/VulnerableCommonPatterns.sol#190)\n",
+        "markdown": "[VulnerableSignatureMalleability.executeWithSignature(address,uint256,uint256,bytes)](common-patterns/VulnerableCommonPatterns.sol#L175-L191) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(to).transfer(amount)](common-patterns/VulnerableCommonPatterns.sol#L190)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L175-L191",
+        "id": "1e1dd21c0cf6220aac5bf7c2ac65380fa7c5f4e378622c3bed91d230013d676c",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "batchTransfer",
+            "source_mapping": {
+              "start": 1676,
+              "length": 295,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                48,
+                49,
+                50,
+                51,
+                52,
+                53
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDoSTransfer",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 750,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "batchTransfer(address[],uint256[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(recipients[i]).transfer(amounts[i])",
+            "source_mapping": {
+              "start": 1911,
+              "length": 43,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                51
+              ],
+              "starting_column": 13,
+              "ending_column": 56
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "batchTransfer",
+                "source_mapping": {
+                  "start": 1676,
+                  "length": 295,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDoSTransfer",
+                    "source_mapping": {
+                      "start": 1223,
+                      "length": 750,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "batchTransfer(address[],uint256[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDoSTransfer.batchTransfer(address[],uint256[]) (common-patterns/VulnerableCommonPatterns.sol#48-53) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(recipients[i]).transfer(amounts[i]) (common-patterns/VulnerableCommonPatterns.sol#51)\n",
+        "markdown": "[VulnerableDoSTransfer.batchTransfer(address[],uint256[])](common-patterns/VulnerableCommonPatterns.sol#L48-L53) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(recipients[i]).transfer(amounts[i])](common-patterns/VulnerableCommonPatterns.sol#L51)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L48-L53",
+        "id": "35ea82b790dd29536087f9a16463d51d3cb28d2bd5c31cb86f0217f3a1887bfd",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdrawAll",
+            "source_mapping": {
+              "start": 11496,
+              "length": 214,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                335,
+                336,
+                337,
+                338,
+                339
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTxOrigin",
+                "source_mapping": {
+                  "start": 11319,
+                  "length": 641,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    327,
+                    328,
+                    329,
+                    330,
+                    331,
+                    332,
+                    333,
+                    334,
+                    335,
+                    336,
+                    337,
+                    338,
+                    339,
+                    340,
+                    341,
+                    342,
+                    343,
+                    344,
+                    345,
+                    346,
+                    347,
+                    348,
+                    349,
+                    350
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdrawAll()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(owner).transfer(address(this).balance)",
+            "source_mapping": {
+              "start": 11657,
+              "length": 46,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                338
+              ],
+              "starting_column": 9,
+              "ending_column": 55
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdrawAll",
+                "source_mapping": {
+                  "start": 11496,
+                  "length": 214,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    335,
+                    336,
+                    337,
+                    338,
+                    339
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTxOrigin",
+                    "source_mapping": {
+                      "start": 11319,
+                      "length": 641,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        327,
+                        328,
+                        329,
+                        330,
+                        331,
+                        332,
+                        333,
+                        334,
+                        335,
+                        336,
+                        337,
+                        338,
+                        339,
+                        340,
+                        341,
+                        342,
+                        343,
+                        344,
+                        345,
+                        346,
+                        347,
+                        348,
+                        349,
+                        350
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdrawAll()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableTxOrigin.withdrawAll() (common-patterns/VulnerableCommonPatterns.sol#335-339) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(owner).transfer(address(this).balance) (common-patterns/VulnerableCommonPatterns.sol#338)\n",
+        "markdown": "[VulnerableTxOrigin.withdrawAll()](common-patterns/VulnerableCommonPatterns.sol#L335-L339) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(owner).transfer(address(this).balance)](common-patterns/VulnerableCommonPatterns.sol#L338)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L335-L339",
+        "id": "9224a0c887801319cde02a6c671aa455536ddc1511a6eae424faaa4ade73de6c",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "batchProcess",
+            "source_mapping": {
+              "start": 3259,
+              "length": 373,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableArrayMismatch",
+                "source_mapping": {
+                  "start": 3162,
+                  "length": 908,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108,
+                    109,
+                    110,
+                    111,
+                    112,
+                    113,
+                    114,
+                    115
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "batchProcess(address[],uint256[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(addresses[i]).transfer(amounts[i])",
+            "source_mapping": {
+              "start": 3573,
+              "length": 42,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                98
+              ],
+              "starting_column": 13,
+              "ending_column": 55
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "batchProcess",
+                "source_mapping": {
+                  "start": 3259,
+                  "length": 373,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableArrayMismatch",
+                    "source_mapping": {
+                      "start": 3162,
+                      "length": 908,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        89,
+                        90,
+                        91,
+                        92,
+                        93,
+                        94,
+                        95,
+                        96,
+                        97,
+                        98,
+                        99,
+                        100,
+                        101,
+                        102,
+                        103,
+                        104,
+                        105,
+                        106,
+                        107,
+                        108,
+                        109,
+                        110,
+                        111,
+                        112,
+                        113,
+                        114,
+                        115
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "batchProcess(address[],uint256[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableArrayMismatch.batchProcess(address[],uint256[]) (common-patterns/VulnerableCommonPatterns.sol#91-100) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(addresses[i]).transfer(amounts[i]) (common-patterns/VulnerableCommonPatterns.sol#98)\n",
+        "markdown": "[VulnerableArrayMismatch.batchProcess(address[],uint256[])](common-patterns/VulnerableCommonPatterns.sol#L91-L100) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(addresses[i]).transfer(amounts[i])](common-patterns/VulnerableCommonPatterns.sol#L98)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L91-L100",
+        "id": "d6a3461b232153e807d59d83b8682407569e287981b5cf19d83480e2078f2f73",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "drawWinner",
+            "source_mapping": {
+              "start": 5611,
+              "length": 347,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableRandomness",
+                "source_mapping": {
+                  "start": 5157,
+                  "length": 803,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    142,
+                    143,
+                    144,
+                    145,
+                    146,
+                    147,
+                    148,
+                    149,
+                    150,
+                    151,
+                    152,
+                    153,
+                    154,
+                    155,
+                    156,
+                    157,
+                    158,
+                    159,
+                    160,
+                    161,
+                    162,
+                    163,
+                    164,
+                    165
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "drawWinner()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "winnerIndex = random % participants.length",
+            "source_mapping": {
+              "start": 5859,
+              "length": 50,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                162
+              ],
+              "starting_column": 9,
+              "ending_column": 59
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "drawWinner",
+                "source_mapping": {
+                  "start": 5611,
+                  "length": 347,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    156,
+                    157,
+                    158,
+                    159,
+                    160,
+                    161,
+                    162,
+                    163,
+                    164
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableRandomness",
+                    "source_mapping": {
+                      "start": 5157,
+                      "length": 803,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        142,
+                        143,
+                        144,
+                        145,
+                        146,
+                        147,
+                        148,
+                        149,
+                        150,
+                        151,
+                        152,
+                        153,
+                        154,
+                        155,
+                        156,
+                        157,
+                        158,
+                        159,
+                        160,
+                        161,
+                        162,
+                        163,
+                        164,
+                        165
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "drawWinner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableRandomness.drawWinner() (common-patterns/VulnerableCommonPatterns.sol#156-164) uses a weak PRNG: \"winnerIndex = random % participants.length (common-patterns/VulnerableCommonPatterns.sol#162)\" \n",
+        "markdown": "[VulnerableRandomness.drawWinner()](common-patterns/VulnerableCommonPatterns.sol#L156-L164) uses a weak PRNG: \"[winnerIndex = random % participants.length](common-patterns/VulnerableCommonPatterns.sol#L162)\" \n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L156-L164",
+        "id": "3706278e5225cb525673840ecff59542950bdf178417e2e9db560ebc855a201b",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "execute",
+            "source_mapping": {
+              "start": 508,
+              "length": 237,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                17,
+                18,
+                19,
+                20,
+                21
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDelegatecall",
+                "source_mapping": {
+                  "start": 372,
+                  "length": 672,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "execute(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(success,None) = target.delegatecall(data)",
+            "source_mapping": {
+              "start": 645,
+              "length": 44,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                19
+              ],
+              "starting_column": 9,
+              "ending_column": 53
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 508,
+                  "length": 237,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    17,
+                    18,
+                    19,
+                    20,
+                    21
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDelegatecall",
+                    "source_mapping": {
+                      "start": 372,
+                      "length": 672,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "execute(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDelegatecall.execute(address,bytes) (common-patterns/VulnerableCommonPatterns.sol#17-21) uses delegatecall to a input-controlled function id\n\t- (success,None) = target.delegatecall(data) (common-patterns/VulnerableCommonPatterns.sol#19)\n",
+        "markdown": "[VulnerableDelegatecall.execute(address,bytes)](common-patterns/VulnerableCommonPatterns.sol#L17-L21) uses delegatecall to a input-controlled function id\n\t- [(success,None) = target.delegatecall(data)](common-patterns/VulnerableCommonPatterns.sol#L19)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L17-L21",
+        "id": "8735b2a33c15926ec5e7eed1203ec72902460f0a118e0db0e5c4ce5cbc338966",
+        "check": "controlled-delegatecall",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "batchTransferTokens",
+            "source_mapping": {
+              "start": 2725,
+              "length": 258,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                77,
+                78,
+                79,
+                80,
+                81,
+                82
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableExternalCallsLoop",
+                "source_mapping": {
+                  "start": 2248,
+                  "length": 737,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "batchTransferTokens(IToken,address[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "token.transfer(recipients[i],100)",
+            "source_mapping": {
+              "start": 2932,
+              "length": 34,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                80
+              ],
+              "starting_column": 13,
+              "ending_column": 47
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "batchTransferTokens",
+                "source_mapping": {
+                  "start": 2725,
+                  "length": 258,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableExternalCallsLoop",
+                    "source_mapping": {
+                      "start": 2248,
+                      "length": 737,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75,
+                        76,
+                        77,
+                        78,
+                        79,
+                        80,
+                        81,
+                        82,
+                        83
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "batchTransferTokens(IToken,address[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableExternalCallsLoop.batchTransferTokens(IToken,address[]) (common-patterns/VulnerableCommonPatterns.sol#77-82) ignores return value by token.transfer(recipients[i],100) (common-patterns/VulnerableCommonPatterns.sol#80)\n",
+        "markdown": "[VulnerableExternalCallsLoop.batchTransferTokens(IToken,address[])](common-patterns/VulnerableCommonPatterns.sol#L77-L82) ignores return value by [token.transfer(recipients[i],100)](common-patterns/VulnerableCommonPatterns.sol#L80)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L77-L82",
+        "id": "ee5189e63dc92b5239bf943f4d12a77f707c6af4959a3b70a0cae6b57041aa30",
+        "check": "unchecked-transfer",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "rewards",
+            "source_mapping": {
+              "start": 2319,
+              "length": 42,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                66
+              ],
+              "starting_column": 5,
+              "ending_column": 47
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableExternalCallsLoop",
+                "source_mapping": {
+                  "start": 2248,
+                  "length": 737,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "distributeRewards",
+            "source_mapping": {
+              "start": 2427,
+              "length": 234,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableExternalCallsLoop",
+                "source_mapping": {
+                  "start": 2248,
+                  "length": 737,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "distributeRewards()"
+            }
+          }
+        ],
+        "description": "VulnerableExternalCallsLoop.rewards (common-patterns/VulnerableCommonPatterns.sol#66) is never initialized. It is used in:\n\t- VulnerableExternalCallsLoop.distributeRewards() (common-patterns/VulnerableCommonPatterns.sol#69-74)\n",
+        "markdown": "[VulnerableExternalCallsLoop.rewards](common-patterns/VulnerableCommonPatterns.sol#L66) is never initialized. It is used in:\n\t- [VulnerableExternalCallsLoop.distributeRewards()](common-patterns/VulnerableCommonPatterns.sol#L69-L74)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L66",
+        "id": "41fa53b660faf676dec0e5263b38ff258e3807a80faa14edbc045712ef7decc0",
+        "check": "uninitialized-state",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "participants",
+            "source_mapping": {
+              "start": 5575,
+              "length": 29,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                154
+              ],
+              "starting_column": 5,
+              "ending_column": 34
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableRandomness",
+                "source_mapping": {
+                  "start": 5157,
+                  "length": 803,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    142,
+                    143,
+                    144,
+                    145,
+                    146,
+                    147,
+                    148,
+                    149,
+                    150,
+                    151,
+                    152,
+                    153,
+                    154,
+                    155,
+                    156,
+                    157,
+                    158,
+                    159,
+                    160,
+                    161,
+                    162,
+                    163,
+                    164,
+                    165
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "drawWinner",
+            "source_mapping": {
+              "start": 5611,
+              "length": 347,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                156,
+                157,
+                158,
+                159,
+                160,
+                161,
+                162,
+                163,
+                164
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableRandomness",
+                "source_mapping": {
+                  "start": 5157,
+                  "length": 803,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    142,
+                    143,
+                    144,
+                    145,
+                    146,
+                    147,
+                    148,
+                    149,
+                    150,
+                    151,
+                    152,
+                    153,
+                    154,
+                    155,
+                    156,
+                    157,
+                    158,
+                    159,
+                    160,
+                    161,
+                    162,
+                    163,
+                    164,
+                    165
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "drawWinner()"
+            }
+          }
+        ],
+        "description": "VulnerableRandomness.participants (common-patterns/VulnerableCommonPatterns.sol#154) is never initialized. It is used in:\n\t- VulnerableRandomness.drawWinner() (common-patterns/VulnerableCommonPatterns.sol#156-164)\n",
+        "markdown": "[VulnerableRandomness.participants](common-patterns/VulnerableCommonPatterns.sol#L154) is never initialized. It is used in:\n\t- [VulnerableRandomness.drawWinner()](common-patterns/VulnerableCommonPatterns.sol#L156-L164)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L154",
+        "id": "7a9e07ca1bab9567587872656705361dc53a3215aba9cb17ba5f28c55107b3c5",
+        "check": "uninitialized-state",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "users",
+            "source_mapping": {
+              "start": 2291,
+              "length": 22,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                65
+              ],
+              "starting_column": 5,
+              "ending_column": 27
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableExternalCallsLoop",
+                "source_mapping": {
+                  "start": 2248,
+                  "length": 737,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "distributeRewards",
+            "source_mapping": {
+              "start": 2427,
+              "length": 234,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableExternalCallsLoop",
+                "source_mapping": {
+                  "start": 2248,
+                  "length": 737,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "distributeRewards()"
+            }
+          }
+        ],
+        "description": "VulnerableExternalCallsLoop.users (common-patterns/VulnerableCommonPatterns.sol#65) is never initialized. It is used in:\n\t- VulnerableExternalCallsLoop.distributeRewards() (common-patterns/VulnerableCommonPatterns.sol#69-74)\n",
+        "markdown": "[VulnerableExternalCallsLoop.users](common-patterns/VulnerableCommonPatterns.sol#L65) is never initialized. It is used in:\n\t- [VulnerableExternalCallsLoop.distributeRewards()](common-patterns/VulnerableCommonPatterns.sol#L69-L74)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L65",
+        "id": "c8d500d274b423fd0743274b5719d0a92e11c021caf3184ccfbed6940ae80f82",
+        "check": "uninitialized-state",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "implementation",
+            "source_mapping": {
+              "start": 410,
+              "length": 29,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                14
+              ],
+              "starting_column": 5,
+              "ending_column": 34
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDelegatecall",
+                "source_mapping": {
+                  "start": 372,
+                  "length": 672,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "executeToImplementation",
+            "source_mapping": {
+              "start": 806,
+              "length": 236,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDelegatecall",
+                "source_mapping": {
+                  "start": 372,
+                  "length": 672,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "executeToImplementation(bytes)"
+            }
+          }
+        ],
+        "description": "VulnerableDelegatecall.implementation (common-patterns/VulnerableCommonPatterns.sol#14) is never initialized. It is used in:\n\t- VulnerableDelegatecall.executeToImplementation(bytes) (common-patterns/VulnerableCommonPatterns.sol#24-28)\n",
+        "markdown": "[VulnerableDelegatecall.implementation](common-patterns/VulnerableCommonPatterns.sol#L14) is never initialized. It is used in:\n\t- [VulnerableDelegatecall.executeToImplementation(bytes)](common-patterns/VulnerableCommonPatterns.sol#L24-L28)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L14",
+        "id": "d259514c527edf6130ee846ebbf62c3eb2d734521d4b4b40c3ef774eb8e393fb",
+        "check": "uninitialized-state",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "complexCalculation",
+            "source_mapping": {
+              "start": 4710,
+              "length": 266,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                131,
+                132,
+                133,
+                134,
+                135
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDivisionOrder",
+                "source_mapping": {
+                  "start": 4256,
+                  "length": 722,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    121,
+                    122,
+                    123,
+                    124,
+                    125,
+                    126,
+                    127,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    133,
+                    134,
+                    135,
+                    136
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "complexCalculation(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "step2 = step1 / 50",
+            "source_mapping": {
+              "start": 4855,
+              "length": 26,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                133
+              ],
+              "starting_column": 9,
+              "ending_column": 35
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complexCalculation",
+                "source_mapping": {
+                  "start": 4710,
+                  "length": 266,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    131,
+                    132,
+                    133,
+                    134,
+                    135
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDivisionOrder",
+                    "source_mapping": {
+                      "start": 4256,
+                      "length": 722,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        121,
+                        122,
+                        123,
+                        124,
+                        125,
+                        126,
+                        127,
+                        128,
+                        129,
+                        130,
+                        131,
+                        132,
+                        133,
+                        134,
+                        135,
+                        136
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "complexCalculation(uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "step2 * 75",
+            "source_mapping": {
+              "start": 4918,
+              "length": 17,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                134
+              ],
+              "starting_column": 9,
+              "ending_column": 26
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complexCalculation",
+                "source_mapping": {
+                  "start": 4710,
+                  "length": 266,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    131,
+                    132,
+                    133,
+                    134,
+                    135
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDivisionOrder",
+                    "source_mapping": {
+                      "start": 4256,
+                      "length": 722,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        121,
+                        122,
+                        123,
+                        124,
+                        125,
+                        126,
+                        127,
+                        128,
+                        129,
+                        130,
+                        131,
+                        132,
+                        133,
+                        134,
+                        135,
+                        136
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "complexCalculation(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDivisionOrder.complexCalculation(uint256) (common-patterns/VulnerableCommonPatterns.sol#131-135) performs a multiplication on the result of a division:\n\t- step2 = step1 / 50 (common-patterns/VulnerableCommonPatterns.sol#133)\n\t- step2 * 75 (common-patterns/VulnerableCommonPatterns.sol#134)\n",
+        "markdown": "[VulnerableDivisionOrder.complexCalculation(uint256)](common-patterns/VulnerableCommonPatterns.sol#L131-L135) performs a multiplication on the result of a division:\n\t- [step2 = step1 / 50](common-patterns/VulnerableCommonPatterns.sol#L133)\n\t- [step2 * 75](common-patterns/VulnerableCommonPatterns.sol#L134)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L131-L135",
+        "id": "ef400767a9eb70985ee256d207df1ed535fac6222811e608de95203473e17f05",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "calculateReward",
+            "source_mapping": {
+              "start": 4422,
+              "length": 213,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                125,
+                126,
+                127,
+                128
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDivisionOrder",
+                "source_mapping": {
+                  "start": 4256,
+                  "length": 722,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    121,
+                    122,
+                    123,
+                    124,
+                    125,
+                    126,
+                    127,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    133,
+                    134,
+                    135,
+                    136
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "calculateReward(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(amount / FEE_DENOMINATOR) * feeNumerator",
+            "source_mapping": {
+              "start": 4580,
+              "length": 48,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                127
+              ],
+              "starting_column": 9,
+              "ending_column": 57
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "calculateReward",
+                "source_mapping": {
+                  "start": 4422,
+                  "length": 213,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    125,
+                    126,
+                    127,
+                    128
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDivisionOrder",
+                    "source_mapping": {
+                      "start": 4256,
+                      "length": 722,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        121,
+                        122,
+                        123,
+                        124,
+                        125,
+                        126,
+                        127,
+                        128,
+                        129,
+                        130,
+                        131,
+                        132,
+                        133,
+                        134,
+                        135,
+                        136
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "calculateReward(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDivisionOrder.calculateReward(uint256,uint256) (common-patterns/VulnerableCommonPatterns.sol#125-128) performs a multiplication on the result of a division:\n\t- (amount / FEE_DENOMINATOR) * feeNumerator (common-patterns/VulnerableCommonPatterns.sol#127)\n",
+        "markdown": "[VulnerableDivisionOrder.calculateReward(uint256,uint256)](common-patterns/VulnerableCommonPatterns.sol#L125-L128) performs a multiplication on the result of a division:\n\t- [(amount / FEE_DENOMINATOR) * feeNumerator](common-patterns/VulnerableCommonPatterns.sol#L127)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L125-L128",
+        "id": "f9be99a231d4fbbc5e87824cac89b584f46b83d52695f08bd71ace74b0e9829c",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "VulnerableFrontRunning",
+            "source_mapping": {
+              "start": 7368,
+              "length": 948,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239
+              ],
+              "starting_column": 1,
+              "ending_column": 2
+            }
+          },
+          {
+            "type": "function",
+            "name": "approve",
+            "source_mapping": {
+              "start": 8148,
+              "length": 166,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                235,
+                236,
+                237,
+                238
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableFrontRunning",
+                "source_mapping": {
+                  "start": 7368,
+                  "length": 948,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    212,
+                    213,
+                    214,
+                    215,
+                    216,
+                    217,
+                    218,
+                    219,
+                    220,
+                    221,
+                    222,
+                    223,
+                    224,
+                    225,
+                    226,
+                    227,
+                    228,
+                    229,
+                    230,
+                    231,
+                    232,
+                    233,
+                    234,
+                    235,
+                    236,
+                    237,
+                    238,
+                    239
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "approve(address,uint256)"
+            }
+          }
+        ],
+        "description": "VulnerableFrontRunning (common-patterns/VulnerableCommonPatterns.sol#212-239) has incorrect ERC20 function interface:VulnerableFrontRunning.approve(address,uint256) (common-patterns/VulnerableCommonPatterns.sol#235-238)\n",
+        "markdown": "[VulnerableFrontRunning](common-patterns/VulnerableCommonPatterns.sol#L212-L239) has incorrect ERC20 function interface:[VulnerableFrontRunning.approve(address,uint256)](common-patterns/VulnerableCommonPatterns.sol#L235-L238)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L212-L239",
+        "id": "92ba80ed3a59aaacf56c74431cbe0753980d52abe173b473daf41f339d642bfb",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "isActionAllowed",
+            "source_mapping": {
+              "start": 10559,
+              "length": 156,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                307,
+                308,
+                309,
+                310
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableBlockDependency",
+                "source_mapping": {
+                  "start": 10453,
+                  "length": 685,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    305,
+                    306,
+                    307,
+                    308,
+                    309,
+                    310,
+                    311,
+                    312,
+                    313,
+                    314,
+                    315,
+                    316,
+                    317,
+                    318,
+                    319,
+                    320,
+                    321
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "isActionAllowed()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "block.number % 10 == 0",
+            "source_mapping": {
+              "start": 10679,
+              "length": 29,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                309
+              ],
+              "starting_column": 9,
+              "ending_column": 38
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "isActionAllowed",
+                "source_mapping": {
+                  "start": 10559,
+                  "length": 156,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    307,
+                    308,
+                    309,
+                    310
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableBlockDependency",
+                    "source_mapping": {
+                      "start": 10453,
+                      "length": 685,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        305,
+                        306,
+                        307,
+                        308,
+                        309,
+                        310,
+                        311,
+                        312,
+                        313,
+                        314,
+                        315,
+                        316,
+                        317,
+                        318,
+                        319,
+                        320,
+                        321
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "isActionAllowed()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableBlockDependency.isActionAllowed() (common-patterns/VulnerableCommonPatterns.sol#307-310) uses a dangerous strict equality:\n\t- block.number % 10 == 0 (common-patterns/VulnerableCommonPatterns.sol#309)\n",
+        "markdown": "[VulnerableBlockDependency.isActionAllowed()](common-patterns/VulnerableCommonPatterns.sol#L307-L310) uses a dangerous strict equality:\n\t- [block.number % 10 == 0](common-patterns/VulnerableCommonPatterns.sol#L309)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L307-L310",
+        "id": "89cad5a333408b80e1930dcd91123f135c3f177c27b0f195141f8cac00e1a12d",
+        "check": "incorrect-equality",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "VulnerableFrontRunning",
+            "source_mapping": {
+              "start": 7368,
+              "length": 948,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                212,
+                213,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                224,
+                225,
+                226,
+                227,
+                228,
+                229,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239
+              ],
+              "starting_column": 1,
+              "ending_column": 2
+            }
+          },
+          {
+            "type": "function",
+            "name": "buyItem",
+            "source_mapping": {
+              "start": 7824,
+              "length": 197,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                226,
+                227,
+                228,
+                229,
+                230
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableFrontRunning",
+                "source_mapping": {
+                  "start": 7368,
+                  "length": 948,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    212,
+                    213,
+                    214,
+                    215,
+                    216,
+                    217,
+                    218,
+                    219,
+                    220,
+                    221,
+                    222,
+                    223,
+                    224,
+                    225,
+                    226,
+                    227,
+                    228,
+                    229,
+                    230,
+                    231,
+                    232,
+                    233,
+                    234,
+                    235,
+                    236,
+                    237,
+                    238,
+                    239
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "buyItem()"
+            }
+          }
+        ],
+        "description": "Contract locking ether found:\n\tContract VulnerableFrontRunning (common-patterns/VulnerableCommonPatterns.sol#212-239) has payable functions:\n\t - VulnerableFrontRunning.buyItem() (common-patterns/VulnerableCommonPatterns.sol#226-230)\n\tBut does not have a function to withdraw the ether\n",
+        "markdown": "Contract locking ether found:\n\tContract [VulnerableFrontRunning](common-patterns/VulnerableCommonPatterns.sol#L212-L239) has payable functions:\n\t - [VulnerableFrontRunning.buyItem()](common-patterns/VulnerableCommonPatterns.sol#L226-L230)\n\tBut does not have a function to withdraw the ether\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L212-L239",
+        "id": "0da02b2f1452f1d926ac2328c9039350f8ac8bc31d424c7ce52e4ffa9580e5d7",
+        "check": "locked-ether",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdrawAll",
+            "source_mapping": {
+              "start": 11496,
+              "length": 214,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                335,
+                336,
+                337,
+                338,
+                339
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTxOrigin",
+                "source_mapping": {
+                  "start": 11319,
+                  "length": 641,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    327,
+                    328,
+                    329,
+                    330,
+                    331,
+                    332,
+                    333,
+                    334,
+                    335,
+                    336,
+                    337,
+                    338,
+                    339,
+                    340,
+                    341,
+                    342,
+                    343,
+                    344,
+                    345,
+                    346,
+                    347,
+                    348,
+                    349,
+                    350
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdrawAll()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(tx.origin == owner,Not owner)",
+            "source_mapping": {
+              "start": 11538,
+              "length": 40,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                336
+              ],
+              "starting_column": 9,
+              "ending_column": 49
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdrawAll",
+                "source_mapping": {
+                  "start": 11496,
+                  "length": 214,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    335,
+                    336,
+                    337,
+                    338,
+                    339
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTxOrigin",
+                    "source_mapping": {
+                      "start": 11319,
+                      "length": 641,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        327,
+                        328,
+                        329,
+                        330,
+                        331,
+                        332,
+                        333,
+                        334,
+                        335,
+                        336,
+                        337,
+                        338,
+                        339,
+                        340,
+                        341,
+                        342,
+                        343,
+                        344,
+                        345,
+                        346,
+                        347,
+                        348,
+                        349,
+                        350
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdrawAll()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableTxOrigin.withdrawAll() (common-patterns/VulnerableCommonPatterns.sol#335-339) uses tx.origin for authorization: require(bool,string)(tx.origin == owner,Not owner) (common-patterns/VulnerableCommonPatterns.sol#336)\n",
+        "markdown": "[VulnerableTxOrigin.withdrawAll()](common-patterns/VulnerableCommonPatterns.sol#L335-L339) uses tx.origin for authorization: [require(bool,string)(tx.origin == owner,Not owner)](common-patterns/VulnerableCommonPatterns.sol#L336)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L335-L339",
+        "id": "5d0a3b6130eeace939b3be1ba650e77ad3e58095061fdf852bccbce29f31f327",
+        "check": "tx-origin",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "target",
+            "source_mapping": {
+              "start": 525,
+              "length": 14,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                17
+              ],
+              "starting_column": 22,
+              "ending_column": 36
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 508,
+                  "length": 237,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    17,
+                    18,
+                    19,
+                    20,
+                    21
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDelegatecall",
+                    "source_mapping": {
+                      "start": 372,
+                      "length": 672,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "execute(address,bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "(success,None) = target.delegatecall(data)",
+            "source_mapping": {
+              "start": 645,
+              "length": 44,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                19
+              ],
+              "starting_column": 9,
+              "ending_column": 53
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 508,
+                  "length": 237,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    17,
+                    18,
+                    19,
+                    20,
+                    21
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDelegatecall",
+                    "source_mapping": {
+                      "start": 372,
+                      "length": 672,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "execute(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDelegatecall.execute(address,bytes).target (common-patterns/VulnerableCommonPatterns.sol#17) lacks a zero-check on :\n\t\t- (success,None) = target.delegatecall(data) (common-patterns/VulnerableCommonPatterns.sol#19)\n",
+        "markdown": "[VulnerableDelegatecall.execute(address,bytes).target](common-patterns/VulnerableCommonPatterns.sol#L17) lacks a zero-check on :\n\t\t- [(success,None) = target.delegatecall(data)](common-patterns/VulnerableCommonPatterns.sol#L19)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L17",
+        "id": "16990deb80cc592e728589789255197b4e03f3293978c97bbb4d64d40ca53b8c",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "to",
+            "source_mapping": {
+              "start": 6327,
+              "length": 10,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                176
+              ],
+              "starting_column": 9,
+              "ending_column": 19
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeWithSignature",
+                "source_mapping": {
+                  "start": 6288,
+                  "length": 522,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    175,
+                    176,
+                    177,
+                    178,
+                    179,
+                    180,
+                    181,
+                    182,
+                    183,
+                    184,
+                    185,
+                    186,
+                    187,
+                    188,
+                    189,
+                    190,
+                    191
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableSignatureMalleability",
+                    "source_mapping": {
+                      "start": 6138,
+                      "length": 1045,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        171,
+                        172,
+                        173,
+                        174,
+                        175,
+                        176,
+                        177,
+                        178,
+                        179,
+                        180,
+                        181,
+                        182,
+                        183,
+                        184,
+                        185,
+                        186,
+                        187,
+                        188,
+                        189,
+                        190,
+                        191,
+                        192,
+                        193,
+                        194,
+                        195,
+                        196,
+                        197,
+                        198,
+                        199,
+                        200,
+                        201,
+                        202,
+                        203,
+                        204,
+                        205,
+                        206
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "executeWithSignature(address,uint256,uint256,bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(to).transfer(amount)",
+            "source_mapping": {
+              "start": 6775,
+              "length": 28,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                190
+              ],
+              "starting_column": 9,
+              "ending_column": 37
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeWithSignature",
+                "source_mapping": {
+                  "start": 6288,
+                  "length": 522,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    175,
+                    176,
+                    177,
+                    178,
+                    179,
+                    180,
+                    181,
+                    182,
+                    183,
+                    184,
+                    185,
+                    186,
+                    187,
+                    188,
+                    189,
+                    190,
+                    191
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableSignatureMalleability",
+                    "source_mapping": {
+                      "start": 6138,
+                      "length": 1045,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        171,
+                        172,
+                        173,
+                        174,
+                        175,
+                        176,
+                        177,
+                        178,
+                        179,
+                        180,
+                        181,
+                        182,
+                        183,
+                        184,
+                        185,
+                        186,
+                        187,
+                        188,
+                        189,
+                        190,
+                        191,
+                        192,
+                        193,
+                        194,
+                        195,
+                        196,
+                        197,
+                        198,
+                        199,
+                        200,
+                        201,
+                        202,
+                        203,
+                        204,
+                        205,
+                        206
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "executeWithSignature(address,uint256,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableSignatureMalleability.executeWithSignature(address,uint256,uint256,bytes).to (common-patterns/VulnerableCommonPatterns.sol#176) lacks a zero-check on :\n\t\t- address(to).transfer(amount) (common-patterns/VulnerableCommonPatterns.sol#190)\n",
+        "markdown": "[VulnerableSignatureMalleability.executeWithSignature(address,uint256,uint256,bytes).to](common-patterns/VulnerableCommonPatterns.sol#L176) lacks a zero-check on :\n\t\t- [address(to).transfer(amount)](common-patterns/VulnerableCommonPatterns.sol#L190)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L176",
+        "id": "df10f29fafb459da1fe12e84765915bd37290b3a89e8a600182d18612cc48d1b",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "batchProcess",
+            "source_mapping": {
+              "start": 3259,
+              "length": 373,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableArrayMismatch",
+                "source_mapping": {
+                  "start": 3162,
+                  "length": 908,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108,
+                    109,
+                    110,
+                    111,
+                    112,
+                    113,
+                    114,
+                    115
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "batchProcess(address[],uint256[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(addresses[i]).transfer(amounts[i])",
+            "source_mapping": {
+              "start": 3573,
+              "length": 42,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                98
+              ],
+              "starting_column": 13,
+              "ending_column": 55
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "batchProcess",
+                "source_mapping": {
+                  "start": 3259,
+                  "length": 373,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableArrayMismatch",
+                    "source_mapping": {
+                      "start": 3162,
+                      "length": 908,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        89,
+                        90,
+                        91,
+                        92,
+                        93,
+                        94,
+                        95,
+                        96,
+                        97,
+                        98,
+                        99,
+                        100,
+                        101,
+                        102,
+                        103,
+                        104,
+                        105,
+                        106,
+                        107,
+                        108,
+                        109,
+                        110,
+                        111,
+                        112,
+                        113,
+                        114,
+                        115
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "batchProcess(address[],uint256[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableArrayMismatch.batchProcess(address[],uint256[]) (common-patterns/VulnerableCommonPatterns.sol#91-100) has external calls inside a loop: address(addresses[i]).transfer(amounts[i]) (common-patterns/VulnerableCommonPatterns.sol#98)\n",
+        "markdown": "[VulnerableArrayMismatch.batchProcess(address[],uint256[])](common-patterns/VulnerableCommonPatterns.sol#L91-L100) has external calls inside a loop: [address(addresses[i]).transfer(amounts[i])](common-patterns/VulnerableCommonPatterns.sol#L98)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L91-L100",
+        "id": "3b2b4897d0279a90731efc648152374f9b70d225d8f47c6881df9ca06d6d207a",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "distributeRewards",
+            "source_mapping": {
+              "start": 2427,
+              "length": 234,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableExternalCallsLoop",
+                "source_mapping": {
+                  "start": 2248,
+                  "length": 737,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "distributeRewards()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(users[i]).transfer(rewards[users[i]])",
+            "source_mapping": {
+              "start": 2599,
+              "length": 45,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                72
+              ],
+              "starting_column": 13,
+              "ending_column": 58
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "distributeRewards",
+                "source_mapping": {
+                  "start": 2427,
+                  "length": 234,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableExternalCallsLoop",
+                    "source_mapping": {
+                      "start": 2248,
+                      "length": 737,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75,
+                        76,
+                        77,
+                        78,
+                        79,
+                        80,
+                        81,
+                        82,
+                        83
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "distributeRewards()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableExternalCallsLoop.distributeRewards() (common-patterns/VulnerableCommonPatterns.sol#69-74) has external calls inside a loop: address(users[i]).transfer(rewards[users[i]]) (common-patterns/VulnerableCommonPatterns.sol#72)\n",
+        "markdown": "[VulnerableExternalCallsLoop.distributeRewards()](common-patterns/VulnerableCommonPatterns.sol#L69-L74) has external calls inside a loop: [address(users[i]).transfer(rewards[users[i]])](common-patterns/VulnerableCommonPatterns.sol#L72)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L69-L74",
+        "id": "8e0c16a68e882072c3ef1596f566b75e07cdcfa1042cc6c6b957e05d6f104b2a",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "batchTransferTokens",
+            "source_mapping": {
+              "start": 2725,
+              "length": 258,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                77,
+                78,
+                79,
+                80,
+                81,
+                82
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableExternalCallsLoop",
+                "source_mapping": {
+                  "start": 2248,
+                  "length": 737,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "batchTransferTokens(IToken,address[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "token.transfer(recipients[i],100)",
+            "source_mapping": {
+              "start": 2932,
+              "length": 34,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                80
+              ],
+              "starting_column": 13,
+              "ending_column": 47
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "batchTransferTokens",
+                "source_mapping": {
+                  "start": 2725,
+                  "length": 258,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableExternalCallsLoop",
+                    "source_mapping": {
+                      "start": 2248,
+                      "length": 737,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75,
+                        76,
+                        77,
+                        78,
+                        79,
+                        80,
+                        81,
+                        82,
+                        83
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "batchTransferTokens(IToken,address[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableExternalCallsLoop.batchTransferTokens(IToken,address[]) (common-patterns/VulnerableCommonPatterns.sol#77-82) has external calls inside a loop: token.transfer(recipients[i],100) (common-patterns/VulnerableCommonPatterns.sol#80)\n",
+        "markdown": "[VulnerableExternalCallsLoop.batchTransferTokens(IToken,address[])](common-patterns/VulnerableCommonPatterns.sol#L77-L82) has external calls inside a loop: [token.transfer(recipients[i],100)](common-patterns/VulnerableCommonPatterns.sol#L80)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L77-L82",
+        "id": "a4025082b5c162315f2cda3217b561ebe432a0a9000776d0aee5d8a561eb91d9",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "batchTransfer",
+            "source_mapping": {
+              "start": 1676,
+              "length": 295,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                48,
+                49,
+                50,
+                51,
+                52,
+                53
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDoSTransfer",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 750,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "batchTransfer(address[],uint256[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(recipients[i]).transfer(amounts[i])",
+            "source_mapping": {
+              "start": 1911,
+              "length": 43,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                51
+              ],
+              "starting_column": 13,
+              "ending_column": 56
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "batchTransfer",
+                "source_mapping": {
+                  "start": 1676,
+                  "length": 295,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDoSTransfer",
+                    "source_mapping": {
+                      "start": 1223,
+                      "length": 750,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "batchTransfer(address[],uint256[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDoSTransfer.batchTransfer(address[],uint256[]) (common-patterns/VulnerableCommonPatterns.sol#48-53) has external calls inside a loop: address(recipients[i]).transfer(amounts[i]) (common-patterns/VulnerableCommonPatterns.sol#51)\n",
+        "markdown": "[VulnerableDoSTransfer.batchTransfer(address[],uint256[])](common-patterns/VulnerableCommonPatterns.sol#L48-L53) has external calls inside a loop: [address(recipients[i]).transfer(amounts[i])](common-patterns/VulnerableCommonPatterns.sol#L51)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L48-L53",
+        "id": "ee7362ebf49fcd5a4e8ef5bd479eb916153103e72721a69cd33add2303853db5",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "criticalAction",
+            "source_mapping": {
+              "start": 10888,
+              "length": 248,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                316,
+                317,
+                318,
+                319,
+                320
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableBlockDependency",
+                "source_mapping": {
+                  "start": 10453,
+                  "length": 685,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    305,
+                    306,
+                    307,
+                    308,
+                    309,
+                    310,
+                    311,
+                    312,
+                    313,
+                    314,
+                    315,
+                    316,
+                    317,
+                    318,
+                    319,
+                    320,
+                    321
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "criticalAction()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp >= lastAction[msg.sender] + COOLDOWN,Cooldown)",
+            "source_mapping": {
+              "start": 11006,
+              "length": 73,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                318
+              ],
+              "starting_column": 9,
+              "ending_column": 82
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "criticalAction",
+                "source_mapping": {
+                  "start": 10888,
+                  "length": 248,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    316,
+                    317,
+                    318,
+                    319,
+                    320
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableBlockDependency",
+                    "source_mapping": {
+                      "start": 10453,
+                      "length": 685,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        305,
+                        306,
+                        307,
+                        308,
+                        309,
+                        310,
+                        311,
+                        312,
+                        313,
+                        314,
+                        315,
+                        316,
+                        317,
+                        318,
+                        319,
+                        320,
+                        321
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "criticalAction()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableBlockDependency.criticalAction() (common-patterns/VulnerableCommonPatterns.sol#316-320) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp >= lastAction[msg.sender] + COOLDOWN,Cooldown) (common-patterns/VulnerableCommonPatterns.sol#318)\n",
+        "markdown": "[VulnerableBlockDependency.criticalAction()](common-patterns/VulnerableCommonPatterns.sol#L316-L320) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(block.timestamp >= lastAction[msg.sender] + COOLDOWN,Cooldown)](common-patterns/VulnerableCommonPatterns.sol#L318)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L316-L320",
+        "id": "bd4443e805d7d29bd2607ffb22eac6fabc39f214bfeb21dc75ddf09a6c97676d",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "recoverSigner",
+            "source_mapping": {
+              "start": 6816,
+              "length": 365,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableSignatureMalleability",
+                "source_mapping": {
+                  "start": 6138,
+                  "length": 1045,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    171,
+                    172,
+                    173,
+                    174,
+                    175,
+                    176,
+                    177,
+                    178,
+                    179,
+                    180,
+                    181,
+                    182,
+                    183,
+                    184,
+                    185,
+                    186,
+                    187,
+                    188,
+                    189,
+                    190,
+                    191,
+                    192,
+                    193,
+                    194,
+                    195,
+                    196,
+                    197,
+                    198,
+                    199,
+                    200,
+                    201,
+                    202,
+                    203,
+                    204,
+                    205,
+                    206
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "recoverSigner(bytes32,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 6975,
+              "length": 158,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                198,
+                199,
+                200,
+                201,
+                202
+              ],
+              "starting_column": 9,
+              "ending_column": 10
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "recoverSigner",
+                "source_mapping": {
+                  "start": 6816,
+                  "length": 365,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    193,
+                    194,
+                    195,
+                    196,
+                    197,
+                    198,
+                    199,
+                    200,
+                    201,
+                    202,
+                    203,
+                    204,
+                    205
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableSignatureMalleability",
+                    "source_mapping": {
+                      "start": 6138,
+                      "length": 1045,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        171,
+                        172,
+                        173,
+                        174,
+                        175,
+                        176,
+                        177,
+                        178,
+                        179,
+                        180,
+                        181,
+                        182,
+                        183,
+                        184,
+                        185,
+                        186,
+                        187,
+                        188,
+                        189,
+                        190,
+                        191,
+                        192,
+                        193,
+                        194,
+                        195,
+                        196,
+                        197,
+                        198,
+                        199,
+                        200,
+                        201,
+                        202,
+                        203,
+                        204,
+                        205,
+                        206
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "recoverSigner(bytes32,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableSignatureMalleability.recoverSigner(bytes32,bytes) (common-patterns/VulnerableCommonPatterns.sol#193-205) uses assembly\n\t- INLINE ASM (common-patterns/VulnerableCommonPatterns.sol#198-202)\n",
+        "markdown": "[VulnerableSignatureMalleability.recoverSigner(bytes32,bytes)](common-patterns/VulnerableCommonPatterns.sol#L193-L205) uses assembly\n\t- [INLINE ASM](common-patterns/VulnerableCommonPatterns.sol#L198-L202)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L193-L205",
+        "id": "b27e23668325e66607a579c7d8b549e06abd6213952ffc40d48c3e8de62a6928",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.20",
+            "source_mapping": {
+              "start": 32,
+              "length": 24,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".20"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- ^0.8.20 (common-patterns/VulnerableCommonPatterns.sol#2)\n",
+        "markdown": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- [^0.8.20](common-patterns/VulnerableCommonPatterns.sol#L2)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L2",
+        "id": "69637c9a37ce47860efe81c670dc634b97de1706bb34186430a9be0dc0f5c635",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "execute",
+            "source_mapping": {
+              "start": 508,
+              "length": 237,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                17,
+                18,
+                19,
+                20,
+                21
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDelegatecall",
+                "source_mapping": {
+                  "start": 372,
+                  "length": 672,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "execute(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(success,None) = target.delegatecall(data)",
+            "source_mapping": {
+              "start": 645,
+              "length": 44,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                19
+              ],
+              "starting_column": 9,
+              "ending_column": 53
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 508,
+                  "length": 237,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    17,
+                    18,
+                    19,
+                    20,
+                    21
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDelegatecall",
+                    "source_mapping": {
+                      "start": 372,
+                      "length": 672,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "execute(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in VulnerableDelegatecall.execute(address,bytes) (common-patterns/VulnerableCommonPatterns.sol#17-21):\n\t- (success,None) = target.delegatecall(data) (common-patterns/VulnerableCommonPatterns.sol#19)\n",
+        "markdown": "Low level call in [VulnerableDelegatecall.execute(address,bytes)](common-patterns/VulnerableCommonPatterns.sol#L17-L21):\n\t- [(success,None) = target.delegatecall(data)](common-patterns/VulnerableCommonPatterns.sol#L19)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L17-L21",
+        "id": "1f9e7047aeff4c0acbdb4cdc251ee1369a53b53a329341b980dcbbef6e3539eb",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeToImplementation",
+            "source_mapping": {
+              "start": 806,
+              "length": 236,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDelegatecall",
+                "source_mapping": {
+                  "start": 372,
+                  "length": 672,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "executeToImplementation(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(success,None) = implementation.delegatecall(data)",
+            "source_mapping": {
+              "start": 947,
+              "length": 52,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                26
+              ],
+              "starting_column": 9,
+              "ending_column": 61
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeToImplementation",
+                "source_mapping": {
+                  "start": 806,
+                  "length": 236,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    24,
+                    25,
+                    26,
+                    27,
+                    28
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDelegatecall",
+                    "source_mapping": {
+                      "start": 372,
+                      "length": 672,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "executeToImplementation(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in VulnerableDelegatecall.executeToImplementation(bytes) (common-patterns/VulnerableCommonPatterns.sol#24-28):\n\t- (success,None) = implementation.delegatecall(data) (common-patterns/VulnerableCommonPatterns.sol#26)\n",
+        "markdown": "Low level call in [VulnerableDelegatecall.executeToImplementation(bytes)](common-patterns/VulnerableCommonPatterns.sol#L24-L28):\n\t- [(success,None) = implementation.delegatecall(data)](common-patterns/VulnerableCommonPatterns.sol#L26)\n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L24-L28",
+        "id": "689efe40caec3e4ae9190b423db5e526acb877f37d06155ba0d85dd226749c11",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "i < users.length",
+            "source_mapping": {
+              "start": 2495,
+              "length": 16,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                70
+              ],
+              "starting_column": 29,
+              "ending_column": 45
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "distributeRewards",
+                "source_mapping": {
+                  "start": 2427,
+                  "length": 234,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableExternalCallsLoop",
+                    "source_mapping": {
+                      "start": 2248,
+                      "length": 737,
+                      "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                      "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75,
+                        76,
+                        77,
+                        78,
+                        79,
+                        80,
+                        81,
+                        82,
+                        83
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "distributeRewards()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Loop condition i < users.length (common-patterns/VulnerableCommonPatterns.sol#70) should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "markdown": "Loop condition [i < users.length](common-patterns/VulnerableCommonPatterns.sol#L70) should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L70",
+        "id": "1c6f305a733350eaa6ebeb77eb469e2a5d859955e4c62a6b46bdc8c07b80785e",
+        "check": "cache-array-length",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "implementation",
+            "source_mapping": {
+              "start": 410,
+              "length": 29,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                14
+              ],
+              "starting_column": 5,
+              "ending_column": 34
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDelegatecall",
+                "source_mapping": {
+                  "start": 372,
+                  "length": 672,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDelegatecall.implementation (common-patterns/VulnerableCommonPatterns.sol#14) should be constant \n",
+        "markdown": "[VulnerableDelegatecall.implementation](common-patterns/VulnerableCommonPatterns.sol#L14) should be constant \n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L14",
+        "id": "b16c772dae88101a9f892894863a34201276c43b1018dd1a8d379d005372f5b3",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "itemPrice",
+            "source_mapping": {
+              "start": 7783,
+              "length": 34,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                224
+              ],
+              "starting_column": 5,
+              "ending_column": 39
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableFrontRunning",
+                "source_mapping": {
+                  "start": 7368,
+                  "length": 948,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    212,
+                    213,
+                    214,
+                    215,
+                    216,
+                    217,
+                    218,
+                    219,
+                    220,
+                    221,
+                    222,
+                    223,
+                    224,
+                    225,
+                    226,
+                    227,
+                    228,
+                    229,
+                    230,
+                    231,
+                    232,
+                    233,
+                    234,
+                    235,
+                    236,
+                    237,
+                    238,
+                    239
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableFrontRunning.itemPrice (common-patterns/VulnerableCommonPatterns.sol#224) should be constant \n",
+        "markdown": "[VulnerableFrontRunning.itemPrice](common-patterns/VulnerableCommonPatterns.sol#L224) should be constant \n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L224",
+        "id": "bd4d545f2d54004852d25cac4c8976c966d34e0f9aa5df383d0d9a941c36cf9d",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "owner",
+            "source_mapping": {
+              "start": 11353,
+              "length": 20,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                328
+              ],
+              "starting_column": 5,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTxOrigin",
+                "source_mapping": {
+                  "start": 11319,
+                  "length": 641,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    327,
+                    328,
+                    329,
+                    330,
+                    331,
+                    332,
+                    333,
+                    334,
+                    335,
+                    336,
+                    337,
+                    338,
+                    339,
+                    340,
+                    341,
+                    342,
+                    343,
+                    344,
+                    345,
+                    346,
+                    347,
+                    348,
+                    349,
+                    350
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableTxOrigin.owner (common-patterns/VulnerableCommonPatterns.sol#328) should be immutable \n",
+        "markdown": "[VulnerableTxOrigin.owner](common-patterns/VulnerableCommonPatterns.sol#L328) should be immutable \n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L328",
+        "id": "217256d87d74ef510f9caae07466a123ae9eb1af558153c804d91a4154f0c589",
+        "check": "immutable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "owner",
+            "source_mapping": {
+              "start": 8533,
+              "length": 20,
+              "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+              "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+              "is_dependency": false,
+              "lines": [
+                246
+              ],
+              "starting_column": 5,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableEmergencyControls",
+                "source_mapping": {
+                  "start": 8490,
+                  "length": 978,
+                  "filename_relative": "common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/common-patterns/VulnerableCommonPatterns.sol",
+                  "filename_short": "common-patterns/VulnerableCommonPatterns.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    245,
+                    246,
+                    247,
+                    248,
+                    249,
+                    250,
+                    251,
+                    252,
+                    253,
+                    254,
+                    255,
+                    256,
+                    257,
+                    258,
+                    259,
+                    260,
+                    261,
+                    262,
+                    263,
+                    264,
+                    265,
+                    266,
+                    267,
+                    268,
+                    269,
+                    270,
+                    271,
+                    272,
+                    273,
+                    274
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableEmergencyControls.owner (common-patterns/VulnerableCommonPatterns.sol#246) should be immutable \n",
+        "markdown": "[VulnerableEmergencyControls.owner](common-patterns/VulnerableCommonPatterns.sol#L246) should be immutable \n",
+        "first_markdown_element": "common-patterns/VulnerableCommonPatterns.sol#L246",
+        "id": "40f4ac34237d14772b8ceffeb9ee5ab36da9e764a1aca6b66873060cea5f330b",
+        "check": "immutable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

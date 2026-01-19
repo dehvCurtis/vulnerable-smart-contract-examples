@@ -1,0 +1,45 @@
+{
+  "soliditydefend": {
+    "total": 10021,
+    "by_severity": {
+      "critical": 2636,
+      "high": 4302,
+      "medium": 2142,
+      "low": 941
+    },
+    "detection_metrics": {
+      "true_positives": 60,
+      "false_negatives": 0,
+      "total_expected": 60,
+      "detection_rate": 100.0
+    }
+  },
+  "slither": {
+    "total": 951,
+    "by_severity": {
+      "medium": 97,
+      "low": 217,
+      "info": 490,
+      "high": 147
+    },
+    "detection_metrics": {
+      "true_positives": 27,
+      "false_negatives": 33,
+      "total_expected": 60,
+      "detection_rate": 45.0
+    }
+  },
+  "aderyn": {
+    "total": 282,
+    "by_severity": {
+      "high": 45,
+      "low": 237
+    },
+    "detection_metrics": {
+      "true_positives": 22,
+      "false_negatives": 38,
+      "total_expected": 60,
+      "detection_rate": 36.666666666666664
+    }
+  }
+}

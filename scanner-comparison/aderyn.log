@@ -1,0 +1,6 @@
+Compilation Error: [1;31mError (2314)[0m[1;37m: Expected ',' but got 'library'[0m
+   [34m-->[0m DelegatecallAdvanced.sol:332:46:
+[34m    |[0m
+[34m332 |[0m     function externalLibraryDelegate(address [33mlibrary[0m, bytes memory data) public {
+[34m    |[0m                                              [1;33m^^^^^^^[0m
+

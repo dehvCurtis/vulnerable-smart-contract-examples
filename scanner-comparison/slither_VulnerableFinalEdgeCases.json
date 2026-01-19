@@ -1,0 +1,1410 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "calculateReward",
+            "source_mapping": {
+              "start": 14952,
+              "length": 383,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                465,
+                466,
+                467,
+                468,
+                469,
+                470,
+                471,
+                472,
+                473,
+                474,
+                475,
+                476,
+                477
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableDivisionBeforeMultiplication",
+                "source_mapping": {
+                  "start": 14819,
+                  "length": 518,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    463,
+                    464,
+                    465,
+                    466,
+                    467,
+                    468,
+                    469,
+                    470,
+                    471,
+                    472,
+                    473,
+                    474,
+                    475,
+                    476,
+                    477,
+                    478
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "calculateReward(uint256,uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "intermediate = amount / denominator",
+            "source_mapping": {
+              "start": 15186,
+              "length": 43,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                473
+              ],
+              "starting_column": 9,
+              "ending_column": 52
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "calculateReward",
+                "source_mapping": {
+                  "start": 14952,
+                  "length": 383,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    465,
+                    466,
+                    467,
+                    468,
+                    469,
+                    470,
+                    471,
+                    472,
+                    473,
+                    474,
+                    475,
+                    476,
+                    477
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDivisionBeforeMultiplication",
+                    "source_mapping": {
+                      "start": 14819,
+                      "length": 518,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        463,
+                        464,
+                        465,
+                        466,
+                        467,
+                        468,
+                        469,
+                        470,
+                        471,
+                        472,
+                        473,
+                        474,
+                        475,
+                        476,
+                        477,
+                        478
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "calculateReward(uint256,uint256,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "intermediate * rate",
+            "source_mapping": {
+              "start": 15239,
+              "length": 26,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                474
+              ],
+              "starting_column": 9,
+              "ending_column": 35
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "calculateReward",
+                "source_mapping": {
+                  "start": 14952,
+                  "length": 383,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    465,
+                    466,
+                    467,
+                    468,
+                    469,
+                    470,
+                    471,
+                    472,
+                    473,
+                    474,
+                    475,
+                    476,
+                    477
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableDivisionBeforeMultiplication",
+                    "source_mapping": {
+                      "start": 14819,
+                      "length": 518,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        463,
+                        464,
+                        465,
+                        466,
+                        467,
+                        468,
+                        469,
+                        470,
+                        471,
+                        472,
+                        473,
+                        474,
+                        475,
+                        476,
+                        477,
+                        478
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "calculateReward(uint256,uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableDivisionBeforeMultiplication.calculateReward(uint256,uint256,uint256) (final-edge-cases/VulnerableFinalEdgeCases.sol#465-477) performs a multiplication on the result of a division:\n\t- intermediate = amount / denominator (final-edge-cases/VulnerableFinalEdgeCases.sol#473)\n\t- intermediate * rate (final-edge-cases/VulnerableFinalEdgeCases.sol#474)\n",
+        "markdown": "[VulnerableDivisionBeforeMultiplication.calculateReward(uint256,uint256,uint256)](final-edge-cases/VulnerableFinalEdgeCases.sol#L465-L477) performs a multiplication on the result of a division:\n\t- [intermediate = amount / denominator](final-edge-cases/VulnerableFinalEdgeCases.sol#L473)\n\t- [intermediate * rate](final-edge-cases/VulnerableFinalEdgeCases.sol#L474)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L465-L477",
+        "id": "f0222d37c3a3595ef1339e46ab60aa02a36e22bdd6d7fef36e4d3d9f3b848f77",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "VulnerableInfiniteApproval",
+            "source_mapping": {
+              "start": 17572,
+              "length": 491,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                559,
+                560,
+                561,
+                562,
+                563,
+                564,
+                565,
+                566,
+                567,
+                568,
+                569,
+                570,
+                571,
+                572
+              ],
+              "starting_column": 1,
+              "ending_column": 2
+            }
+          },
+          {
+            "type": "function",
+            "name": "approve",
+            "source_mapping": {
+              "start": 17735,
+              "length": 326,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                563,
+                564,
+                565,
+                566,
+                567,
+                568,
+                569,
+                570,
+                571
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableInfiniteApproval",
+                "source_mapping": {
+                  "start": 17572,
+                  "length": 491,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    559,
+                    560,
+                    561,
+                    562,
+                    563,
+                    564,
+                    565,
+                    566,
+                    567,
+                    568,
+                    569,
+                    570,
+                    571,
+                    572
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "approve(address,uint256)"
+            }
+          }
+        ],
+        "description": "VulnerableInfiniteApproval (final-edge-cases/VulnerableFinalEdgeCases.sol#559-572) has incorrect ERC20 function interface:VulnerableInfiniteApproval.approve(address,uint256) (final-edge-cases/VulnerableFinalEdgeCases.sol#563-571)\n",
+        "markdown": "[VulnerableInfiniteApproval](final-edge-cases/VulnerableFinalEdgeCases.sol#L559-L572) has incorrect ERC20 function interface:[VulnerableInfiniteApproval.approve(address,uint256)](final-edge-cases/VulnerableFinalEdgeCases.sol#L563-L571)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L559-L572",
+        "id": "55e8c9260af6b8d9c7b8de416e103ebbe77e11000579b5dd336970b736f58902",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "VulnerableERC777Hooks",
+            "source_mapping": {
+              "start": 16926,
+              "length": 603,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                535,
+                536,
+                537,
+                538,
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553,
+                554
+              ],
+              "starting_column": 1,
+              "ending_column": 2
+            }
+          },
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 17063,
+              "length": 464,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableERC777Hooks",
+                "source_mapping": {
+                  "start": 16926,
+                  "length": 603,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    535,
+                    536,
+                    537,
+                    538,
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553,
+                    554
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          }
+        ],
+        "description": "VulnerableERC777Hooks (final-edge-cases/VulnerableFinalEdgeCases.sol#535-554) has incorrect ERC20 function interface:VulnerableERC777Hooks.transfer(address,uint256) (final-edge-cases/VulnerableFinalEdgeCases.sol#539-553)\n",
+        "markdown": "[VulnerableERC777Hooks](final-edge-cases/VulnerableFinalEdgeCases.sol#L535-L554) has incorrect ERC20 function interface:[VulnerableERC777Hooks.transfer(address,uint256)](final-edge-cases/VulnerableFinalEdgeCases.sol#L539-L553)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L535-L554",
+        "id": "718a9be92b7b4695c178af2b7735ee7acc927a49ab03b0f175c53db6e6bd6be8",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 17063,
+              "length": 464,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableERC777Hooks",
+                "source_mapping": {
+                  "start": 16926,
+                  "length": 603,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    535,
+                    536,
+                    537,
+                    538,
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553,
+                    554
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(success,None) = to.call()",
+            "source_mapping": {
+              "start": 17374,
+              "length": 29,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                547
+              ],
+              "starting_column": 9,
+              "ending_column": 38
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 17063,
+                  "length": 464,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableERC777Hooks",
+                    "source_mapping": {
+                      "start": 16926,
+                      "length": 603,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        535,
+                        536,
+                        537,
+                        538,
+                        539,
+                        540,
+                        541,
+                        542,
+                        543,
+                        544,
+                        545,
+                        546,
+                        547,
+                        548,
+                        549,
+                        550,
+                        551,
+                        552,
+                        553,
+                        554
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balances[to] += amount",
+            "source_mapping": {
+              "start": 17440,
+              "length": 22,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                550
+              ],
+              "starting_column": 9,
+              "ending_column": 31
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 17063,
+                  "length": 464,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableERC777Hooks",
+                    "source_mapping": {
+                      "start": 16926,
+                      "length": 603,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        535,
+                        536,
+                        537,
+                        538,
+                        539,
+                        540,
+                        541,
+                        542,
+                        543,
+                        544,
+                        545,
+                        546,
+                        547,
+                        548,
+                        549,
+                        550,
+                        551,
+                        552,
+                        553,
+                        554
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balances"
+            }
+          }
+        ],
+        "description": "Reentrancy in VulnerableERC777Hooks.transfer(address,uint256) (final-edge-cases/VulnerableFinalEdgeCases.sol#539-553):\n\tExternal calls:\n\t- (success,None) = to.call() (final-edge-cases/VulnerableFinalEdgeCases.sol#547)\n\tState variables written after the call(s):\n\t- balances[to] += amount (final-edge-cases/VulnerableFinalEdgeCases.sol#550)\n\tVulnerableERC777Hooks.balances (final-edge-cases/VulnerableFinalEdgeCases.sol#536) can be used in cross function reentrancies:\n\t- VulnerableERC777Hooks.balances (final-edge-cases/VulnerableFinalEdgeCases.sol#536)\n\t- VulnerableERC777Hooks.transfer(address,uint256) (final-edge-cases/VulnerableFinalEdgeCases.sol#539-553)\n",
+        "markdown": "Reentrancy in [VulnerableERC777Hooks.transfer(address,uint256)](final-edge-cases/VulnerableFinalEdgeCases.sol#L539-L553):\n\tExternal calls:\n\t- [(success,None) = to.call()](final-edge-cases/VulnerableFinalEdgeCases.sol#L547)\n\tState variables written after the call(s):\n\t- [balances[to] += amount](final-edge-cases/VulnerableFinalEdgeCases.sol#L550)\n\t[VulnerableERC777Hooks.balances](final-edge-cases/VulnerableFinalEdgeCases.sol#L536) can be used in cross function reentrancies:\n\t- [VulnerableERC777Hooks.balances](final-edge-cases/VulnerableFinalEdgeCases.sol#L536)\n\t- [VulnerableERC777Hooks.transfer(address,uint256)](final-edge-cases/VulnerableFinalEdgeCases.sol#L539-L553)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L539-L553",
+        "id": "39f76b9d44b5097beb307486d0b58c649b9845bdfbea4e2819afbed96e663ad6",
+        "check": "reentrancy-no-eth",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "to",
+            "source_mapping": {
+              "start": 17081,
+              "length": 10,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                539
+              ],
+              "starting_column": 23,
+              "ending_column": 33
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 17063,
+                  "length": 464,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableERC777Hooks",
+                    "source_mapping": {
+                      "start": 16926,
+                      "length": 603,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        535,
+                        536,
+                        537,
+                        538,
+                        539,
+                        540,
+                        541,
+                        542,
+                        543,
+                        544,
+                        545,
+                        546,
+                        547,
+                        548,
+                        549,
+                        550,
+                        551,
+                        552,
+                        553,
+                        554
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "(success,None) = to.call()",
+            "source_mapping": {
+              "start": 17374,
+              "length": 29,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                547
+              ],
+              "starting_column": 9,
+              "ending_column": 38
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 17063,
+                  "length": 464,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableERC777Hooks",
+                    "source_mapping": {
+                      "start": 16926,
+                      "length": 603,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        535,
+                        536,
+                        537,
+                        538,
+                        539,
+                        540,
+                        541,
+                        542,
+                        543,
+                        544,
+                        545,
+                        546,
+                        547,
+                        548,
+                        549,
+                        550,
+                        551,
+                        552,
+                        553,
+                        554
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableERC777Hooks.transfer(address,uint256).to (final-edge-cases/VulnerableFinalEdgeCases.sol#539) lacks a zero-check on :\n\t\t- (success,None) = to.call() (final-edge-cases/VulnerableFinalEdgeCases.sol#547)\n",
+        "markdown": "[VulnerableERC777Hooks.transfer(address,uint256).to](final-edge-cases/VulnerableFinalEdgeCases.sol#L539) lacks a zero-check on :\n\t\t- [(success,None) = to.call()](final-edge-cases/VulnerableFinalEdgeCases.sol#L547)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L539",
+        "id": "06d8353db29d02a0ff554cc6a340572e18b6521ac366bb8a0098d0b7c008485f",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deployMetamorphic",
+            "source_mapping": {
+              "start": 13460,
+              "length": 659,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                421,
+                422,
+                423,
+                424,
+                425,
+                426,
+                427,
+                428,
+                429,
+                430,
+                431,
+                432,
+                433,
+                434,
+                435,
+                436,
+                437,
+                438
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableMetamorphicFactory",
+                "source_mapping": {
+                  "start": 13339,
+                  "length": 1251,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    419,
+                    420,
+                    421,
+                    422,
+                    423,
+                    424,
+                    425,
+                    426,
+                    427,
+                    428,
+                    429,
+                    430,
+                    431,
+                    432,
+                    433,
+                    434,
+                    435,
+                    436,
+                    437,
+                    438,
+                    439,
+                    440,
+                    441,
+                    442,
+                    443,
+                    444,
+                    445,
+                    446,
+                    447,
+                    448,
+                    449,
+                    450,
+                    451,
+                    452,
+                    453,
+                    454
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "deployMetamorphic(bytes32,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 13774,
+              "length": 99,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                429,
+                430,
+                431
+              ],
+              "starting_column": 9,
+              "ending_column": 10
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deployMetamorphic",
+                "source_mapping": {
+                  "start": 13460,
+                  "length": 659,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    421,
+                    422,
+                    423,
+                    424,
+                    425,
+                    426,
+                    427,
+                    428,
+                    429,
+                    430,
+                    431,
+                    432,
+                    433,
+                    434,
+                    435,
+                    436,
+                    437,
+                    438
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableMetamorphicFactory",
+                    "source_mapping": {
+                      "start": 13339,
+                      "length": 1251,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        419,
+                        420,
+                        421,
+                        422,
+                        423,
+                        424,
+                        425,
+                        426,
+                        427,
+                        428,
+                        429,
+                        430,
+                        431,
+                        432,
+                        433,
+                        434,
+                        435,
+                        436,
+                        437,
+                        438,
+                        439,
+                        440,
+                        441,
+                        442,
+                        443,
+                        444,
+                        445,
+                        446,
+                        447,
+                        448,
+                        449,
+                        450,
+                        451,
+                        452,
+                        453,
+                        454
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "deployMetamorphic(bytes32,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableMetamorphicFactory.deployMetamorphic(bytes32,bytes) (final-edge-cases/VulnerableFinalEdgeCases.sol#421-438) uses assembly\n\t- INLINE ASM (final-edge-cases/VulnerableFinalEdgeCases.sol#429-431)\n",
+        "markdown": "[VulnerableMetamorphicFactory.deployMetamorphic(bytes32,bytes)](final-edge-cases/VulnerableFinalEdgeCases.sol#L421-L438) uses assembly\n\t- [INLINE ASM](final-edge-cases/VulnerableFinalEdgeCases.sol#L429-L431)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L421-L438",
+        "id": "50d257dc94d0a7f30f736ad1f676c6c20844f401fcbe0eb3738790385f8efb97",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.20",
+            "source_mapping": {
+              "start": 32,
+              "length": 24,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".20"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- ^0.8.20 (final-edge-cases/VulnerableFinalEdgeCases.sol#2)\n",
+        "markdown": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- [^0.8.20](final-edge-cases/VulnerableFinalEdgeCases.sol#L2)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L2",
+        "id": "7f538939a4a5c6246a114638704d16b11e04534edb8a43eec3ae176c5380a738",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 17063,
+              "length": 464,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                539,
+                540,
+                541,
+                542,
+                543,
+                544,
+                545,
+                546,
+                547,
+                548,
+                549,
+                550,
+                551,
+                552,
+                553
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableERC777Hooks",
+                "source_mapping": {
+                  "start": 16926,
+                  "length": 603,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    535,
+                    536,
+                    537,
+                    538,
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553,
+                    554
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(success,None) = to.call()",
+            "source_mapping": {
+              "start": 17374,
+              "length": 29,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                547
+              ],
+              "starting_column": 9,
+              "ending_column": 38
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 17063,
+                  "length": 464,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableERC777Hooks",
+                    "source_mapping": {
+                      "start": 16926,
+                      "length": 603,
+                      "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        535,
+                        536,
+                        537,
+                        538,
+                        539,
+                        540,
+                        541,
+                        542,
+                        543,
+                        544,
+                        545,
+                        546,
+                        547,
+                        548,
+                        549,
+                        550,
+                        551,
+                        552,
+                        553,
+                        554
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in VulnerableERC777Hooks.transfer(address,uint256) (final-edge-cases/VulnerableFinalEdgeCases.sol#539-553):\n\t- (success,None) = to.call() (final-edge-cases/VulnerableFinalEdgeCases.sol#547)\n",
+        "markdown": "Low level call in [VulnerableERC777Hooks.transfer(address,uint256)](final-edge-cases/VulnerableFinalEdgeCases.sol#L539-L553):\n\t- [(success,None) = to.call()](final-edge-cases/VulnerableFinalEdgeCases.sol#L547)\n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L539-L553",
+        "id": "98e10b93e71cbd708cc75bddab4d79de327608d858f581927704d16edda53724",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "lastExecutedSequence",
+            "source_mapping": {
+              "start": 6386,
+              "length": 35,
+              "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+              "is_dependency": false,
+              "lines": [
+                200
+              ],
+              "starting_column": 5,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableCrossChainOrdering",
+                "source_mapping": {
+                  "start": 6193,
+                  "length": 871,
+                  "filename_relative": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "filename_short": "final-edge-cases/VulnerableFinalEdgeCases.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    192,
+                    193,
+                    194,
+                    195,
+                    196,
+                    197,
+                    198,
+                    199,
+                    200,
+                    201,
+                    202,
+                    203,
+                    204,
+                    205,
+                    206,
+                    207,
+                    208,
+                    209,
+                    210,
+                    211,
+                    212,
+                    213,
+                    214,
+                    215,
+                    216,
+                    217,
+                    218,
+                    219
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableCrossChainOrdering.lastExecutedSequence (final-edge-cases/VulnerableFinalEdgeCases.sol#200) should be constant \n",
+        "markdown": "[VulnerableCrossChainOrdering.lastExecutedSequence](final-edge-cases/VulnerableFinalEdgeCases.sol#L200) should be constant \n",
+        "first_markdown_element": "final-edge-cases/VulnerableFinalEdgeCases.sol#L200",
+        "id": "d3b3c3bed7d4f4944fb75fb25493588904f654dfc236de5113ee27da6408300f",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

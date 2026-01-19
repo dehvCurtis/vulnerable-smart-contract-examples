@@ -1,0 +1,2654 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "playGame",
+            "source_mapping": {
+              "start": 3223,
+              "length": 367,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableRandomness",
+                "source_mapping": {
+                  "start": 2706,
+                  "length": 921,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108,
+                    109,
+                    110,
+                    111,
+                    112
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "playGame()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(msg.sender).transfer(20000000000000000)",
+            "source_mapping": {
+              "start": 3486,
+              "length": 40,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                105
+              ],
+              "starting_column": 13,
+              "ending_column": 53
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "playGame",
+                "source_mapping": {
+                  "start": 3223,
+                  "length": 367,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108,
+                    109
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableRandomness",
+                    "source_mapping": {
+                      "start": 2706,
+                      "length": 921,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        81,
+                        82,
+                        83,
+                        84,
+                        85,
+                        86,
+                        87,
+                        88,
+                        89,
+                        90,
+                        91,
+                        92,
+                        93,
+                        94,
+                        95,
+                        96,
+                        97,
+                        98,
+                        99,
+                        100,
+                        101,
+                        102,
+                        103,
+                        104,
+                        105,
+                        106,
+                        107,
+                        108,
+                        109,
+                        110,
+                        111,
+                        112
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "playGame()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableRandomness.playGame() (TimestampDependence.sol#98-109) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(msg.sender).transfer(20000000000000000) (TimestampDependence.sol#105)\n",
+        "markdown": "[VulnerableRandomness.playGame()](TimestampDependence.sol#L98-L109) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(msg.sender).transfer(20000000000000000)](TimestampDependence.sol#L105)\n",
+        "first_markdown_element": "TimestampDependence.sol#L98-L109",
+        "id": "004d0a484c75541b2f3e020f9f634ba79ae0ba2750f060501cead2304f7251d7",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "generateRandomNumber",
+            "source_mapping": {
+              "start": 2837,
+              "length": 380,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableRandomness",
+                "source_mapping": {
+                  "start": 2706,
+                  "length": 921,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108,
+                    109,
+                    110,
+                    111,
+                    112
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "generateRandomNumber()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "random = uint256(keccak256(bytes)(abi.encodePacked(block.timestamp,block.difficulty,block.number,msg.sender))) % 100",
+            "source_mapping": {
+              "start": 2972,
+              "length": 178,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                87,
+                88,
+                89,
+                90,
+                91,
+                92
+              ],
+              "starting_column": 9,
+              "ending_column": 18
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "generateRandomNumber",
+                "source_mapping": {
+                  "start": 2837,
+                  "length": 380,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableRandomness",
+                    "source_mapping": {
+                      "start": 2706,
+                      "length": 921,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        81,
+                        82,
+                        83,
+                        84,
+                        85,
+                        86,
+                        87,
+                        88,
+                        89,
+                        90,
+                        91,
+                        92,
+                        93,
+                        94,
+                        95,
+                        96,
+                        97,
+                        98,
+                        99,
+                        100,
+                        101,
+                        102,
+                        103,
+                        104,
+                        105,
+                        106,
+                        107,
+                        108,
+                        109,
+                        110,
+                        111,
+                        112
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "generateRandomNumber()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableRandomness.generateRandomNumber() (TimestampDependence.sol#85-96) uses a weak PRNG: \"random = uint256(keccak256(bytes)(abi.encodePacked(block.timestamp,block.difficulty,block.number,msg.sender))) % 100 (TimestampDependence.sol#87-92)\" \n",
+        "markdown": "[VulnerableRandomness.generateRandomNumber()](TimestampDependence.sol#L85-L96) uses a weak PRNG: \"[random = uint256(keccak256(bytes)(abi.encodePacked(block.timestamp,block.difficulty,block.number,msg.sender))) % 100](TimestampDependence.sol#L87-L92)\" \n",
+        "first_markdown_element": "TimestampDependence.sol#L85-L96",
+        "id": "4ce42431203d3661b8f19eaca806762c4d5bd5565a7f4168c121a7af6882425b",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "emergencyWithdraw",
+            "source_mapping": {
+              "start": 2304,
+              "length": 280,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTimelock",
+                "source_mapping": {
+                  "start": 1522,
+                  "length": 1064,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "emergencyWithdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds)",
+            "source_mapping": {
+              "start": 2413,
+              "length": 70,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                71
+              ],
+              "starting_column": 9,
+              "ending_column": 79
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "emergencyWithdraw",
+                "source_mapping": {
+                  "start": 2304,
+                  "length": 280,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTimelock",
+                    "source_mapping": {
+                      "start": 1522,
+                      "length": 1064,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "emergencyWithdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableTimelock.emergencyWithdraw() (TimestampDependence.sol#69-74) uses a weak PRNG: \"require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds) (TimestampDependence.sol#71)\" \n",
+        "markdown": "[VulnerableTimelock.emergencyWithdraw()](TimestampDependence.sol#L69-L74) uses a weak PRNG: \"[require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds)](TimestampDependence.sol#L71)\" \n",
+        "first_markdown_element": "TimestampDependence.sol#L69-L74",
+        "id": "c5666d2e41367a89fdbe17a99540f57e4fa377406cac2d7374d653f379107a43",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "drawWinner",
+            "source_mapping": {
+              "start": 875,
+              "length": 529,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableLottery",
+                "source_mapping": {
+                  "start": 291,
+                  "length": 1115,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "drawWinner()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "randomIndex = uint256(keccak256(bytes)(abi.encodePacked(block.timestamp,block.difficulty))) % players.length",
+            "source_mapping": {
+              "start": 1107,
+              "length": 110,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                34
+              ],
+              "starting_column": 9,
+              "ending_column": 119
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "drawWinner",
+                "source_mapping": {
+                  "start": 875,
+                  "length": 529,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableLottery",
+                    "source_mapping": {
+                      "start": 291,
+                      "length": 1115,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "drawWinner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableLottery.drawWinner() (TimestampDependence.sol#29-40) uses a weak PRNG: \"randomIndex = uint256(keccak256(bytes)(abi.encodePacked(block.timestamp,block.difficulty))) % players.length (TimestampDependence.sol#34)\" \n",
+        "markdown": "[VulnerableLottery.drawWinner()](TimestampDependence.sol#L29-L40) uses a weak PRNG: \"[randomIndex = uint256(keccak256(bytes)(abi.encodePacked(block.timestamp,block.difficulty))) % players.length](TimestampDependence.sol#L34)\" \n",
+        "first_markdown_element": "TimestampDependence.sol#L29-L40",
+        "id": "e1db0c643e58290b0700cf287b0a119309fa1cfe8dd08c1b8d50091ea4229b18",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "emergencyWithdraw",
+            "source_mapping": {
+              "start": 2304,
+              "length": 280,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTimelock",
+                "source_mapping": {
+                  "start": 1522,
+                  "length": 1064,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "emergencyWithdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds)",
+            "source_mapping": {
+              "start": 2413,
+              "length": 70,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                71
+              ],
+              "starting_column": 9,
+              "ending_column": 79
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "emergencyWithdraw",
+                "source_mapping": {
+                  "start": 2304,
+                  "length": 280,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTimelock",
+                    "source_mapping": {
+                      "start": 1522,
+                      "length": 1064,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "emergencyWithdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableTimelock.emergencyWithdraw() (TimestampDependence.sol#69-74) uses a dangerous strict equality:\n\t- require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds) (TimestampDependence.sol#71)\n",
+        "markdown": "[VulnerableTimelock.emergencyWithdraw()](TimestampDependence.sol#L69-L74) uses a dangerous strict equality:\n\t- [require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds)](TimestampDependence.sol#L71)\n",
+        "first_markdown_element": "TimestampDependence.sol#L69-L74",
+        "id": "cdf68e2a5a102d43bbf33d8629a01c5c02e1fd9c442d6282de1b84718d1d66bc",
+        "check": "incorrect-equality",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "drawWinner",
+            "source_mapping": {
+              "start": 875,
+              "length": 529,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableLottery",
+                "source_mapping": {
+                  "start": 291,
+                  "length": 1115,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "drawWinner()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp >= lotteryEndTime,Lottery not ended yet)",
+            "source_mapping": {
+              "start": 914,
+              "length": 67,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                30
+              ],
+              "starting_column": 9,
+              "ending_column": 76
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "drawWinner",
+                "source_mapping": {
+                  "start": 875,
+                  "length": 529,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableLottery",
+                    "source_mapping": {
+                      "start": 291,
+                      "length": 1115,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "drawWinner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableLottery.drawWinner() (TimestampDependence.sol#29-40) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp >= lotteryEndTime,Lottery not ended yet) (TimestampDependence.sol#30)\n",
+        "markdown": "[VulnerableLottery.drawWinner()](TimestampDependence.sol#L29-L40) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(block.timestamp >= lotteryEndTime,Lottery not ended yet)](TimestampDependence.sol#L30)\n",
+        "first_markdown_element": "TimestampDependence.sol#L29-L40",
+        "id": "533dfccd4495be0f70d873dac6793e8b977544f1d56118e8101126423cc66d07",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buyTicket",
+            "source_mapping": {
+              "start": 586,
+              "length": 214,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableLottery",
+                "source_mapping": {
+                  "start": 291,
+                  "length": 1115,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "buyTicket()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp < lotteryEndTime,Lottery ended)",
+            "source_mapping": {
+              "start": 701,
+              "length": 58,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                24
+              ],
+              "starting_column": 9,
+              "ending_column": 67
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyTicket",
+                "source_mapping": {
+                  "start": 586,
+                  "length": 214,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    22,
+                    23,
+                    24,
+                    25,
+                    26
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableLottery",
+                    "source_mapping": {
+                      "start": 291,
+                      "length": 1115,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "buyTicket()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableLottery.buyTicket() (TimestampDependence.sol#22-26) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp < lotteryEndTime,Lottery ended) (TimestampDependence.sol#24)\n",
+        "markdown": "[VulnerableLottery.buyTicket()](TimestampDependence.sol#L22-L26) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(block.timestamp < lotteryEndTime,Lottery ended)](TimestampDependence.sol#L24)\n",
+        "first_markdown_element": "TimestampDependence.sol#L22-L26",
+        "id": "6172cdb27d1b95151cf91368d6ed7664c268a05522c17484782e47ccf087d0ab",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 1888,
+              "length": 365,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTimelock",
+                "source_mapping": {
+                  "start": 1522,
+                  "length": 1064,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp >= lockTime[msg.sender],Funds locked)",
+            "source_mapping": {
+              "start": 2054,
+              "length": 64,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                61
+              ],
+              "starting_column": 9,
+              "ending_column": 73
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1888,
+                  "length": 365,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTimelock",
+                    "source_mapping": {
+                      "start": 1522,
+                      "length": 1064,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableTimelock.withdraw() (TimestampDependence.sol#58-66) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp >= lockTime[msg.sender],Funds locked) (TimestampDependence.sol#61)\n",
+        "markdown": "[VulnerableTimelock.withdraw()](TimestampDependence.sol#L58-L66) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(block.timestamp >= lockTime[msg.sender],Funds locked)](TimestampDependence.sol#L61)\n",
+        "first_markdown_element": "TimestampDependence.sol#L58-L66",
+        "id": "85f7c136085ba4a4f684783c83da2467bdd610be41c3ad6d1179564294a5c98b",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "playGame",
+            "source_mapping": {
+              "start": 3223,
+              "length": 367,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableRandomness",
+                "source_mapping": {
+                  "start": 2706,
+                  "length": 921,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108,
+                    109,
+                    110,
+                    111,
+                    112
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "playGame()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "winningNumber > 50",
+            "source_mapping": {
+              "start": 3452,
+              "length": 18,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                104
+              ],
+              "starting_column": 13,
+              "ending_column": 31
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "playGame",
+                "source_mapping": {
+                  "start": 3223,
+                  "length": 367,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108,
+                    109
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableRandomness",
+                    "source_mapping": {
+                      "start": 2706,
+                      "length": 921,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        81,
+                        82,
+                        83,
+                        84,
+                        85,
+                        86,
+                        87,
+                        88,
+                        89,
+                        90,
+                        91,
+                        92,
+                        93,
+                        94,
+                        95,
+                        96,
+                        97,
+                        98,
+                        99,
+                        100,
+                        101,
+                        102,
+                        103,
+                        104,
+                        105,
+                        106,
+                        107,
+                        108,
+                        109,
+                        110,
+                        111,
+                        112
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "playGame()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableRandomness.playGame() (TimestampDependence.sol#98-109) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- winningNumber > 50 (TimestampDependence.sol#104)\n",
+        "markdown": "[VulnerableRandomness.playGame()](TimestampDependence.sol#L98-L109) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [winningNumber > 50](TimestampDependence.sol#L104)\n",
+        "first_markdown_element": "TimestampDependence.sol#L98-L109",
+        "id": "8b7e236f1b65d5450acd7cc1c4ca68ec61cfffb34ebfbe6bf6c7924b4eb60cb6",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "emergencyWithdraw",
+            "source_mapping": {
+              "start": 2304,
+              "length": 280,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTimelock",
+                "source_mapping": {
+                  "start": 1522,
+                  "length": 1064,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "emergencyWithdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds)",
+            "source_mapping": {
+              "start": 2413,
+              "length": 70,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                71
+              ],
+              "starting_column": 9,
+              "ending_column": 79
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "emergencyWithdraw",
+                "source_mapping": {
+                  "start": 2304,
+                  "length": 280,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTimelock",
+                    "source_mapping": {
+                      "start": 1522,
+                      "length": 1064,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "emergencyWithdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableTimelock.emergencyWithdraw() (TimestampDependence.sol#69-74) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds) (TimestampDependence.sol#71)\n",
+        "markdown": "[VulnerableTimelock.emergencyWithdraw()](TimestampDependence.sol#L69-L74) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(block.timestamp % 2 == 0,Can only withdraw on even seconds)](TimestampDependence.sol#L71)\n",
+        "first_markdown_element": "TimestampDependence.sol#L69-L74",
+        "id": "afe8b3137391fb4f97e944b6cab6238dce30f11961a4b5198fdba71c0c9733c3",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.0",
+            "source_mapping": {
+              "start": 32,
+              "length": 23,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 24
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess\n\t- AbiReencodingHeadOverflowWithStaticArrayCleanup\n\t- DirtyBytesArrayToStorage\n\t- DataLocationChangeInInternalOverride\n\t- NestedCalldataArrayAbiReencodingSizeValidation\n\t- SignedImmutables\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching.\nIt is used by:\n\t- ^0.8.0 (TimestampDependence.sol#2)\n",
+        "markdown": "Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess\n\t- AbiReencodingHeadOverflowWithStaticArrayCleanup\n\t- DirtyBytesArrayToStorage\n\t- DataLocationChangeInInternalOverride\n\t- NestedCalldataArrayAbiReencodingSizeValidation\n\t- SignedImmutables\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching.\nIt is used by:\n\t- [^0.8.0](TimestampDependence.sol#L2)\n",
+        "first_markdown_element": "TimestampDependence.sol#L2",
+        "id": "2a044c52bd516b761550923b636e9167efb8e3d0205b9b80f714511e50b19191",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "drawWinner",
+            "source_mapping": {
+              "start": 875,
+              "length": 529,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableLottery",
+                "source_mapping": {
+                  "start": 291,
+                  "length": 1115,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "drawWinner()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(winner).transfer(address(this).balance)",
+            "source_mapping": {
+              "start": 1275,
+              "length": 47,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                37
+              ],
+              "starting_column": 9,
+              "ending_column": 56
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "drawWinner",
+                "source_mapping": {
+                  "start": 875,
+                  "length": 529,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableLottery",
+                    "source_mapping": {
+                      "start": 291,
+                      "length": 1115,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "drawWinner()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "lotteryEndTime = block.timestamp + 86400",
+            "source_mapping": {
+              "start": 1356,
+              "length": 41,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                39
+              ],
+              "starting_column": 9,
+              "ending_column": 50
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "drawWinner",
+                "source_mapping": {
+                  "start": 875,
+                  "length": 529,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableLottery",
+                    "source_mapping": {
+                      "start": 291,
+                      "length": 1115,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "drawWinner()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "lotteryEndTime"
+            }
+          },
+          {
+            "type": "node",
+            "name": "delete players",
+            "source_mapping": {
+              "start": 1332,
+              "length": 14,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                38
+              ],
+              "starting_column": 9,
+              "ending_column": 23
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "drawWinner",
+                "source_mapping": {
+                  "start": 875,
+                  "length": 529,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableLottery",
+                    "source_mapping": {
+                      "start": 291,
+                      "length": 1115,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "drawWinner()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "players"
+            }
+          }
+        ],
+        "description": "Reentrancy in VulnerableLottery.drawWinner() (TimestampDependence.sol#29-40):\n\tExternal calls:\n\t- address(winner).transfer(address(this).balance) (TimestampDependence.sol#37)\n\tState variables written after the call(s):\n\t- lotteryEndTime = block.timestamp + 86400 (TimestampDependence.sol#39)\n\t- delete players (TimestampDependence.sol#38)\n",
+        "markdown": "Reentrancy in [VulnerableLottery.drawWinner()](TimestampDependence.sol#L29-L40):\n\tExternal calls:\n\t- [address(winner).transfer(address(this).balance)](TimestampDependence.sol#L37)\n\tState variables written after the call(s):\n\t- [lotteryEndTime = block.timestamp + 86400](TimestampDependence.sol#L39)\n\t- [delete players](TimestampDependence.sol#L38)\n",
+        "first_markdown_element": "TimestampDependence.sol#L29-L40",
+        "id": "17cf2789279c3c47cea31672a40b914400d8ddd0a885ae4ce0f4ea1b9ff481fd",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "emergencyWithdraw",
+            "source_mapping": {
+              "start": 2304,
+              "length": 280,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableTimelock",
+                "source_mapping": {
+                  "start": 1522,
+                  "length": 1064,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "emergencyWithdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(msg.sender).transfer(balances[msg.sender])",
+            "source_mapping": {
+              "start": 2493,
+              "length": 50,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                72
+              ],
+              "starting_column": 9,
+              "ending_column": 59
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "emergencyWithdraw",
+                "source_mapping": {
+                  "start": 2304,
+                  "length": 280,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTimelock",
+                    "source_mapping": {
+                      "start": 1522,
+                      "length": 1064,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "emergencyWithdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balances[msg.sender] = 0",
+            "source_mapping": {
+              "start": 2553,
+              "length": 24,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                73
+              ],
+              "starting_column": 9,
+              "ending_column": 33
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "emergencyWithdraw",
+                "source_mapping": {
+                  "start": 2304,
+                  "length": 280,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VulnerableTimelock",
+                    "source_mapping": {
+                      "start": 1522,
+                      "length": 1064,
+                      "filename_relative": "TimestampDependence.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                      "filename_short": "TimestampDependence.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69,
+                        70,
+                        71,
+                        72,
+                        73,
+                        74,
+                        75
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "emergencyWithdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balances"
+            }
+          }
+        ],
+        "description": "Reentrancy in VulnerableTimelock.emergencyWithdraw() (TimestampDependence.sol#69-74):\n\tExternal calls:\n\t- address(msg.sender).transfer(balances[msg.sender]) (TimestampDependence.sol#72)\n\tState variables written after the call(s):\n\t- balances[msg.sender] = 0 (TimestampDependence.sol#73)\n",
+        "markdown": "Reentrancy in [VulnerableTimelock.emergencyWithdraw()](TimestampDependence.sol#L69-L74):\n\tExternal calls:\n\t- [address(msg.sender).transfer(balances[msg.sender])](TimestampDependence.sol#L72)\n\tState variables written after the call(s):\n\t- [balances[msg.sender] = 0](TimestampDependence.sol#L73)\n",
+        "first_markdown_element": "TimestampDependence.sol#L69-L74",
+        "id": "72e47f21908c7a11d4d68938de41582131813697c2781a2bc2cd0f084436a25e",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "ticketPrice",
+            "source_mapping": {
+              "start": 415,
+              "length": 38,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                15
+              ],
+              "starting_column": 5,
+              "ending_column": 43
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableLottery",
+                "source_mapping": {
+                  "start": 291,
+                  "length": 1115,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableLottery.ticketPrice (TimestampDependence.sol#15) should be constant \n",
+        "markdown": "[VulnerableLottery.ticketPrice](TimestampDependence.sol#L15) should be constant \n",
+        "first_markdown_element": "TimestampDependence.sol#L15",
+        "id": "427e65b07d39417e542986f52b98b09c65aeb6b90cc65170e964a7d0c8e1990d",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "owner",
+            "source_mapping": {
+              "start": 324,
+              "length": 20,
+              "filename_relative": "TimestampDependence.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+              "filename_short": "TimestampDependence.sol",
+              "is_dependency": false,
+              "lines": [
+                12
+              ],
+              "starting_column": 5,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VulnerableLottery",
+                "source_mapping": {
+                  "start": 291,
+                  "length": 1115,
+                  "filename_relative": "TimestampDependence.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/TimestampDependence.sol",
+                  "filename_short": "TimestampDependence.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "VulnerableLottery.owner (TimestampDependence.sol#12) should be immutable \n",
+        "markdown": "[VulnerableLottery.owner](TimestampDependence.sol#L12) should be immutable \n",
+        "first_markdown_element": "TimestampDependence.sol#L12",
+        "id": "bfd60f52984c44a40d600904cd415029a2db789a32743b77145186031c8948f2",
+        "check": "immutable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

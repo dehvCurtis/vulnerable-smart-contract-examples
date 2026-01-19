@@ -1,0 +1,218 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeAIDecision",
+            "source_mapping": {
+              "start": 88,
+              "length": 157,
+              "filename_relative": "ai-agents/CleanAITest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+              "filename_short": "ai-agents/CleanAITest.sol",
+              "is_dependency": false,
+              "lines": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AIDecisionTest",
+                "source_mapping": {
+                  "start": 58,
+                  "length": 189,
+                  "filename_relative": "ai-agents/CleanAITest.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+                  "filename_short": "ai-agents/CleanAITest.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "executeAIDecision(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(msg.sender).transfer(amount)",
+            "source_mapping": {
+              "start": 202,
+              "length": 36,
+              "filename_relative": "ai-agents/CleanAITest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+              "filename_short": "ai-agents/CleanAITest.sol",
+              "is_dependency": false,
+              "lines": [
+                7
+              ],
+              "starting_column": 9,
+              "ending_column": 45
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeAIDecision",
+                "source_mapping": {
+                  "start": 88,
+                  "length": 157,
+                  "filename_relative": "ai-agents/CleanAITest.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+                  "filename_short": "ai-agents/CleanAITest.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AIDecisionTest",
+                    "source_mapping": {
+                      "start": 58,
+                      "length": 189,
+                      "filename_relative": "ai-agents/CleanAITest.sol",
+                      "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+                      "filename_short": "ai-agents/CleanAITest.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "executeAIDecision(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "AIDecisionTest.executeAIDecision(uint256) (ai-agents/CleanAITest.sol#5-8) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(msg.sender).transfer(amount) (ai-agents/CleanAITest.sol#7)\n",
+        "markdown": "[AIDecisionTest.executeAIDecision(uint256)](ai-agents/CleanAITest.sol#L5-L8) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(msg.sender).transfer(amount)](ai-agents/CleanAITest.sol#L7)\n",
+        "first_markdown_element": "ai-agents/CleanAITest.sol#L5-L8",
+        "id": "01ab0e2ca115970bce4277f9b57be4706976193d9a7a073aa10819a7e15b080b",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.20",
+            "source_mapping": {
+              "start": 32,
+              "length": 24,
+              "filename_relative": "ai-agents/CleanAITest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+              "filename_short": "ai-agents/CleanAITest.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".20"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- ^0.8.20 (ai-agents/CleanAITest.sol#2)\n",
+        "markdown": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- [^0.8.20](ai-agents/CleanAITest.sol#L2)\n",
+        "first_markdown_element": "ai-agents/CleanAITest.sol#L2",
+        "id": "832685729eaa95bc454e8a57b5b40399663bf8baf17ef343246ccde1bb760232",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "priceOracle",
+            "source_mapping": {
+              "start": 648,
+              "length": 26,
+              "filename_relative": "ai-agents/CleanAITest.sol",
+              "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+              "filename_short": "ai-agents/CleanAITest.sol",
+              "is_dependency": false,
+              "lines": [
+                30
+              ],
+              "starting_column": 5,
+              "ending_column": 31
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AutonomousTest",
+                "source_mapping": {
+                  "start": 618,
+                  "length": 190,
+                  "filename_relative": "ai-agents/CleanAITest.sol",
+                  "filename_absolute": "/Users/pwner/Git/vulnerable-smart-contract-examples/contracts/solidity/ai-agents/CleanAITest.sol",
+                  "filename_short": "ai-agents/CleanAITest.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "AutonomousTest.priceOracle (ai-agents/CleanAITest.sol#30) should be constant \n",
+        "markdown": "[AutonomousTest.priceOracle](ai-agents/CleanAITest.sol#L30) should be constant \n",
+        "first_markdown_element": "ai-agents/CleanAITest.sol#L30",
+        "id": "450637ea30393b97c84ab8a62b11dff593b4e871183d65a5d558b13a57004c07",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

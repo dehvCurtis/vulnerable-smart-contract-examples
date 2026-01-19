@@ -1,0 +1,1138 @@
+[
+  {
+    "detector": "eip7702-storage-corruption",
+    "count": 1517
+  },
+  {
+    "detector": "dos-revert-bomb",
+    "count": 1248
+  },
+  {
+    "detector": "dos-block-gas-limit",
+    "count": 1245
+  },
+  {
+    "detector": "bridge-merkle-bypass",
+    "count": 1105
+  },
+  {
+    "detector": "l2-mev-sequencer-leak",
+    "count": 997
+  },
+  {
+    "detector": "delegatecall-in-loop",
+    "count": 950
+  },
+  {
+    "detector": "missing-visibility-modifier",
+    "count": 914
+  },
+  {
+    "detector": "initcode-injection",
+    "count": 737
+  },
+  {
+    "detector": "jit-liquidity-extraction",
+    "count": 711
+  },
+  {
+    "detector": "eip7702-sweeper-attack",
+    "count": 704
+  },
+  {
+    "detector": "shadowing-variables",
+    "count": 572
+  },
+  {
+    "detector": "dos-push-pattern",
+    "count": 561
+  },
+  {
+    "detector": "contract-recreation-attack",
+    "count": 555
+  },
+  {
+    "detector": "eip7702-delegation-phishing",
+    "count": 511
+  },
+  {
+    "detector": "parameter-consistency",
+    "count": 491
+  },
+  {
+    "detector": "constructor-reentrancy",
+    "count": 490
+  },
+  {
+    "detector": "delegatecall-to-self",
+    "count": 486
+  },
+  {
+    "detector": "timelock-bypass-delegatecall",
+    "count": 486
+  },
+  {
+    "detector": "eip7702-authorization-bypass",
+    "count": 446
+  },
+  {
+    "detector": "create2-salt-frontrunning",
+    "count": 401
+  },
+  {
+    "detector": "dos-external-call-loop",
+    "count": 397
+  },
+  {
+    "detector": "dos-unbounded-storage",
+    "count": 374
+  },
+  {
+    "detector": "sandwich-conditional-swap",
+    "count": 372
+  },
+  {
+    "detector": "missing-zero-address-check",
+    "count": 339
+  },
+  {
+    "detector": "challenge-period-bypass",
+    "count": 334
+  },
+  {
+    "detector": "transaction-ordering-dependence",
+    "count": 321
+  },
+  {
+    "detector": "metamorphic-contract-risk",
+    "count": 298
+  },
+  {
+    "detector": "backrunning-opportunity",
+    "count": 296
+  },
+  {
+    "detector": "eip7702-replay-vulnerability",
+    "count": 293
+  },
+  {
+    "detector": "cross-rollup-state-mismatch",
+    "count": 292
+  },
+  {
+    "detector": "blockhash-randomness",
+    "count": 287
+  },
+  {
+    "detector": "mev-extractable-value",
+    "count": 283
+  },
+  {
+    "detector": "role-escalation-upgrade",
+    "count": 283
+  },
+  {
+    "detector": "batch-cross-function-reentrancy",
+    "count": 276
+  },
+  {
+    "detector": "excessive-gas-usage",
+    "count": 273
+  },
+  {
+    "detector": "cross-domain-mev",
+    "count": 270
+  },
+  {
+    "detector": "diamond-facet-code-existence",
+    "count": 264
+  },
+  {
+    "detector": "test-governance",
+    "count": 263
+  },
+  {
+    "detector": "cross-l2-frontrunning",
+    "count": 262
+  },
+  {
+    "detector": "missing-transaction-deadline",
+    "count": 261
+  },
+  {
+    "detector": "nft-mint-mev",
+    "count": 260
+  },
+  {
+    "detector": "gas-griefing",
+    "count": 237
+  },
+  {
+    "detector": "missing-access-modifiers",
+    "count": 233
+  },
+  {
+    "detector": "inefficient-storage",
+    "count": 231
+  },
+  {
+    "detector": "extcodesize-check-bypass",
+    "count": 229
+  },
+  {
+    "detector": "cross-chain-replay-protection",
+    "count": 226
+  },
+  {
+    "detector": "defi-yield-farming-exploits",
+    "count": 215
+  },
+  {
+    "detector": "eip1153-composability-risk",
+    "count": 209
+  },
+  {
+    "detector": "bundle-inclusion-leak",
+    "count": 207
+  },
+  {
+    "detector": "diamond-init-frontrunning",
+    "count": 204
+  },
+  {
+    "detector": "encrypted-mempool-timing",
+    "count": 192
+  },
+  {
+    "detector": "upgrade-event-missing",
+    "count": 177
+  },
+  {
+    "detector": "governance-proposal-mev",
+    "count": 176
+  },
+  {
+    "detector": "order-flow-auction-abuse",
+    "count": 163
+  },
+  {
+    "detector": "proposal-frontrunning",
+    "count": 157
+  },
+  {
+    "detector": "unchecked-external-call",
+    "count": 141
+  },
+  {
+    "detector": "callback-in-callback-loop",
+    "count": 140
+  },
+  {
+    "detector": "zk-proof-bypass",
+    "count": 138
+  },
+  {
+    "detector": "invalid-state-transition",
+    "count": 135
+  },
+  {
+    "detector": "proxy-storage-collision",
+    "count": 135
+  },
+  {
+    "detector": "array-bounds-check",
+    "count": 134
+  },
+  {
+    "detector": "voting-snapshot-manipulation",
+    "count": 132
+  },
+  {
+    "detector": "circular-dependency",
+    "count": 128
+  },
+  {
+    "detector": "unsafe-type-casting",
+    "count": 127
+  },
+  {
+    "detector": "liquidation-mev",
+    "count": 120
+  },
+  {
+    "detector": "swc105-unprotected-ether-withdrawal",
+    "count": 118
+  },
+  {
+    "detector": "validator-front-running",
+    "count": 118
+  },
+  {
+    "detector": "amm-k-invariant-violation",
+    "count": 114
+  },
+  {
+    "detector": "eip1153-cross-tx-assumption",
+    "count": 114
+  },
+  {
+    "detector": "upgradeable-proxy-issues",
+    "count": 111
+  },
+  {
+    "detector": "l2-sequencer-dependency",
+    "count": 105
+  },
+  {
+    "detector": "aa-initialization-vulnerability",
+    "count": 104
+  },
+  {
+    "detector": "oracle-update-mev",
+    "count": 104
+  },
+  {
+    "detector": "transparent-proxy-admin-issues",
+    "count": 102
+  },
+  {
+    "detector": "defi-jit-liquidity-attacks",
+    "count": 100
+  },
+  {
+    "detector": "enhanced-input-validation",
+    "count": 100
+  },
+  {
+    "detector": "logic-error-patterns",
+    "count": 98
+  },
+  {
+    "detector": "multi-block-randomness",
+    "count": 95
+  },
+  {
+    "detector": "eip6780-selfdestruct-change",
+    "count": 94
+  },
+  {
+    "detector": "l2-fee-manipulation",
+    "count": 91
+  },
+  {
+    "detector": "price-manipulation-frontrun",
+    "count": 85
+  },
+  {
+    "detector": "timestamp-manipulation",
+    "count": 84
+  },
+  {
+    "detector": "transient-storage-reentrancy",
+    "count": 82
+  },
+  {
+    "detector": "uniswap-v4-hook-callback",
+    "count": 80
+  },
+  {
+    "detector": "vault-withdrawal-dos",
+    "count": 80
+  },
+  {
+    "detector": "pool-donation-enhanced",
+    "count": 79
+  },
+  {
+    "detector": "sequencer-fee-exploitation",
+    "count": 79
+  },
+  {
+    "detector": "defi-liquidity-pool-manipulation",
+    "count": 77
+  },
+  {
+    "detector": "token-decimal-confusion",
+    "count": 77
+  },
+  {
+    "detector": "dangerous-delegatecall",
+    "count": 73
+  },
+  {
+    "detector": "selfdestruct-recipient-control",
+    "count": 72
+  },
+  {
+    "detector": "private-variable-exposure",
+    "count": 71
+  },
+  {
+    "detector": "single-oracle-source",
+    "count": 70
+  },
+  {
+    "detector": "push0-stack-assumption",
+    "count": 69
+  },
+  {
+    "detector": "transient-reentrancy-guard",
+    "count": 69
+  },
+  {
+    "detector": "floating-pragma",
+    "count": 62
+  },
+  {
+    "detector": "token-supply-manipulation",
+    "count": 61
+  },
+  {
+    "detector": "reinitializer-vulnerability",
+    "count": 59
+  },
+  {
+    "detector": "storage-collision",
+    "count": 58
+  },
+  {
+    "detector": "mev-toxic-flow-exposure",
+    "count": 57
+  },
+  {
+    "detector": "price-impact-manipulation",
+    "count": 56
+  },
+  {
+    "detector": "front-running-mitigation",
+    "count": 55
+  },
+  {
+    "detector": "dos-unbounded-operation",
+    "count": 53
+  },
+  {
+    "detector": "governor-refund-drain",
+    "count": 53
+  },
+  {
+    "detector": "escape-hatch-dependency",
+    "count": 51
+  },
+  {
+    "detector": "post-080-overflow",
+    "count": 51
+  },
+  {
+    "detector": "da-sampling-attack",
+    "count": 50
+  },
+  {
+    "detector": "storage-layout-inheritance-shift",
+    "count": 49
+  },
+  {
+    "detector": "function-selector-clash",
+    "count": 48
+  },
+  {
+    "detector": "amm-liquidity-manipulation",
+    "count": 47
+  },
+  {
+    "detector": "centralization-risk",
+    "count": 46
+  },
+  {
+    "detector": "commit-reveal-timing",
+    "count": 46
+  },
+  {
+    "detector": "eip7702-storage-collision",
+    "count": 46
+  },
+  {
+    "detector": "erc20-transfer-return-bomb",
+    "count": 46
+  },
+  {
+    "detector": "beacon-upgrade-unprotected",
+    "count": 45
+  },
+  {
+    "detector": "eip7702-delegate-access-control",
+    "count": 44
+  },
+  {
+    "detector": "proxy-gap-underflow",
+    "count": 44
+  },
+  {
+    "detector": "erc7821-batch-authorization",
+    "count": 43
+  },
+  {
+    "detector": "sandwich-resistant-swap",
+    "count": 43
+  },
+  {
+    "detector": "signature-replay",
+    "count": 43
+  },
+  {
+    "detector": "cross-chain-replay",
+    "count": 42
+  },
+  {
+    "detector": "eip4844-blob-validation",
+    "count": 42
+  },
+  {
+    "detector": "lending-borrow-bypass",
+    "count": 41
+  },
+  {
+    "detector": "token-launch-mev",
+    "count": 41
+  },
+  {
+    "detector": "batch-transfer-overflow",
+    "count": 40
+  },
+  {
+    "detector": "missing-storage-gap",
+    "count": 39
+  },
+  {
+    "detector": "cross-contract-role-confusion",
+    "count": 38
+  },
+  {
+    "detector": "block-stuffing-vulnerable",
+    "count": 37
+  },
+  {
+    "detector": "dos-failed-transfer",
+    "count": 37
+  },
+  {
+    "detector": "diamond-delegatecall-zero",
+    "count": 36
+  },
+  {
+    "detector": "flash-callback-manipulation",
+    "count": 35
+  },
+  {
+    "detector": "hardware-wallet-delegation",
+    "count": 35
+  },
+  {
+    "detector": "jit-liquidity-sandwich",
+    "count": 35
+  },
+  {
+    "detector": "nonce-reuse",
+    "count": 35
+  },
+  {
+    "detector": "unprotected-initializer",
+    "count": 35
+  },
+  {
+    "detector": "immutable-in-upgradeable",
+    "count": 34
+  },
+  {
+    "detector": "implementation-not-initialized",
+    "count": 34
+  },
+  {
+    "detector": "classic-reentrancy",
+    "count": 33
+  },
+  {
+    "detector": "redundant-checks",
+    "count": 33
+  },
+  {
+    "detector": "diamond-loupe-violation",
+    "count": 32
+  },
+  {
+    "detector": "deadline-manipulation",
+    "count": 29
+  },
+  {
+    "detector": "readonly-reentrancy",
+    "count": 29
+  },
+  {
+    "detector": "withdrawal-delay",
+    "count": 29
+  },
+  {
+    "detector": "insufficient-randomness",
+    "count": 28
+  },
+  {
+    "detector": "diamond-storage-collision",
+    "count": 27
+  },
+  {
+    "detector": "erc1155-callback-reentrancy",
+    "count": 26
+  },
+  {
+    "detector": "external-calls-loop",
+    "count": 26
+  },
+  {
+    "detector": "l2-bridge-message-validation",
+    "count": 26
+  },
+  {
+    "detector": "restaking-withdrawal-delays",
+    "count": 26
+  },
+  {
+    "detector": "vault-hook-reentrancy",
+    "count": 26
+  },
+  {
+    "detector": "fallback-delegatecall-unprotected",
+    "count": 25
+  },
+  {
+    "detector": "validator-griefing",
+    "count": 25
+  },
+  {
+    "detector": "multisig-bypass",
+    "count": 24
+  },
+  {
+    "detector": "price-oracle-stale",
+    "count": 24
+  },
+  {
+    "detector": "uups-missing-disable-initializers",
+    "count": 24
+  },
+  {
+    "detector": "create2-address-collision",
+    "count": 23
+  },
+  {
+    "detector": "mev-priority-gas-auction",
+    "count": 23
+  },
+  {
+    "detector": "delegatecall-user-controlled",
+    "count": 22
+  },
+  {
+    "detector": "diamond-init-reentrancy",
+    "count": 22
+  },
+  {
+    "detector": "implementation-selfdestruct",
+    "count": 22
+  },
+  {
+    "detector": "modulo-block-variable",
+    "count": 22
+  },
+  {
+    "detector": "nested-callback-reentrancy",
+    "count": 22
+  },
+  {
+    "detector": "unused-state-variables",
+    "count": 22
+  },
+  {
+    "detector": "aa-account-takeover",
+    "count": 20
+  },
+  {
+    "detector": "accesscontrol-race-condition",
+    "count": 20
+  },
+  {
+    "detector": "fallback-function-shadowing",
+    "count": 20
+  },
+  {
+    "detector": "optimistic-challenge-bypass",
+    "count": 20
+  },
+  {
+    "detector": "signature-malleability",
+    "count": 20
+  },
+  {
+    "detector": "eip1153-guard-bypass",
+    "count": 19
+  },
+  {
+    "detector": "eip1153-transient-reentrancy",
+    "count": 19
+  },
+  {
+    "detector": "erc4337-entrypoint-trust",
+    "count": 19
+  },
+  {
+    "detector": "oracle-time-window-attack",
+    "count": 19
+  },
+  {
+    "detector": "governance-parameter-bypass",
+    "count": 18
+  },
+  {
+    "detector": "l2-data-availability",
+    "count": 18
+  },
+  {
+    "detector": "missing-chainid-validation",
+    "count": 18
+  },
+  {
+    "detector": "time-locked-admin-bypass",
+    "count": 18
+  },
+  {
+    "detector": "bridge-message-verification",
+    "count": 17
+  },
+  {
+    "detector": "mev-backrun-opportunities",
+    "count": 17
+  },
+  {
+    "detector": "mev-sandwich-vulnerable-swaps",
+    "count": 17
+  },
+  {
+    "detector": "aa-bundler-dos",
+    "count": 16
+  },
+  {
+    "detector": "vault-fee-manipulation",
+    "count": 16
+  },
+  {
+    "detector": "aa-nonce-management",
+    "count": 15
+  },
+  {
+    "detector": "amm-invariant-manipulation",
+    "count": 15
+  },
+  {
+    "detector": "beacon-single-point-of-failure",
+    "count": 15
+  },
+  {
+    "detector": "eip7702-init-frontrun",
+    "count": 15
+  },
+  {
+    "detector": "oracle-manipulation",
+    "count": 15
+  },
+  {
+    "detector": "permit-signature-exploit",
+    "count": 15
+  },
+  {
+    "detector": "diamond-selector-collision",
+    "count": 14
+  },
+  {
+    "detector": "eip7702-batch-phishing",
+    "count": 14
+  },
+  {
+    "detector": "erc4337-gas-griefing",
+    "count": 14
+  },
+  {
+    "detector": "slashing-mechanism",
+    "count": 14
+  },
+  {
+    "detector": "vault-share-inflation",
+    "count": 14
+  },
+  {
+    "detector": "bridge-token-mint-control",
+    "count": 13
+  },
+  {
+    "detector": "missing-input-validation",
+    "count": 13
+  },
+  {
+    "detector": "yield-farming-manipulation",
+    "count": 13
+  },
+  {
+    "detector": "aa-bundler-dos-enhanced",
+    "count": 12
+  },
+  {
+    "detector": "compound-callback-chain",
+    "count": 12
+  },
+  {
+    "detector": "enhanced-access-control",
+    "count": 12
+  },
+  {
+    "detector": "flash-loan-collateral-swap",
+    "count": 12
+  },
+  {
+    "detector": "short-address-attack",
+    "count": 12
+  },
+  {
+    "detector": "aa-social-recovery",
+    "count": 11
+  },
+  {
+    "detector": "hook-reentrancy-enhanced",
+    "count": 11
+  },
+  {
+    "detector": "liquidity-bootstrapping-abuse",
+    "count": 11
+  },
+  {
+    "detector": "storage-layout-upgrade",
+    "count": 11
+  },
+  {
+    "detector": "token-permit-front-running",
+    "count": 11
+  },
+  {
+    "detector": "token-transfer-frontrun",
+    "count": 11
+  },
+  {
+    "detector": "flashmint-token-inflation",
+    "count": 10
+  },
+  {
+    "detector": "lending-liquidation-abuse",
+    "count": 10
+  },
+  {
+    "detector": "operator-whitelist-inheritance",
+    "count": 10
+  },
+  {
+    "detector": "eip7702-sweeper-detection",
+    "count": 9
+  },
+  {
+    "detector": "initializer-reentrancy",
+    "count": 9
+  },
+  {
+    "detector": "missing-eip712-domain",
+    "count": 9
+  },
+  {
+    "detector": "multicall-partial-revert",
+    "count": 9
+  },
+  {
+    "detector": "proxy-double-initialize",
+    "count": 9
+  },
+  {
+    "detector": "uniswapv4-hook-issues",
+    "count": 9
+  },
+  {
+    "detector": "deprecated-functions",
+    "count": 8
+  },
+  {
+    "detector": "extcodesize-bypass",
+    "count": 8
+  },
+  {
+    "detector": "flash-loan-governance-attack",
+    "count": 8
+  },
+  {
+    "detector": "restaking-rewards-manipulation",
+    "count": 8
+  },
+  {
+    "detector": "flash-loan-reentrancy-combo",
+    "count": 7
+  },
+  {
+    "detector": "guardian-role-centralization",
+    "count": 7
+  },
+  {
+    "detector": "erc4337-paymaster-abuse",
+    "count": 6
+  },
+  {
+    "detector": "restaking-delegation-manipulation",
+    "count": 6
+  },
+  {
+    "detector": "role-hierarchy-bypass",
+    "count": 6
+  },
+  {
+    "detector": "transient-storage-state-leak",
+    "count": 6
+  },
+  {
+    "detector": "tx-origin-authentication",
+    "count": 6
+  },
+  {
+    "detector": "aa-paymaster-fund-drain",
+    "count": 5
+  },
+  {
+    "detector": "array-length-mismatch",
+    "count": 5
+  },
+  {
+    "detector": "flash-loan-price-manipulation-advanced",
+    "count": 5
+  },
+  {
+    "detector": "lrt-share-inflation",
+    "count": 5
+  },
+  {
+    "detector": "selfdestruct-abuse",
+    "count": 5
+  },
+  {
+    "detector": "selfdestruct-recipient-manipulation",
+    "count": 5
+  },
+  {
+    "detector": "swc133-hash-collision-varlen",
+    "count": 5
+  },
+  {
+    "detector": "uninitialized-storage",
+    "count": 5
+  },
+  {
+    "detector": "aa-entry-point-reentrancy",
+    "count": 4
+  },
+  {
+    "detector": "aa-signature-aggregation",
+    "count": 4
+  },
+  {
+    "detector": "aa-user-operation-replay",
+    "count": 4
+  },
+  {
+    "detector": "auction-timing-manipulation",
+    "count": 4
+  },
+  {
+    "detector": "create2-frontrunning",
+    "count": 4
+  },
+  {
+    "detector": "delegatecall-return-ignored",
+    "count": 4
+  },
+  {
+    "detector": "delegatecall-untrusted-library",
+    "count": 4
+  },
+  {
+    "detector": "eip7702-txorigin-bypass",
+    "count": 4
+  },
+  {
+    "detector": "flashloan-callback-reentrancy",
+    "count": 4
+  },
+  {
+    "detector": "flashloan-price-oracle-manipulation",
+    "count": 4
+  },
+  {
+    "detector": "intent-signature-replay",
+    "count": 4
+  },
+  {
+    "detector": "restaking-slashing-conditions",
+    "count": 4
+  },
+  {
+    "detector": "swc106-unprotected-selfdestruct",
+    "count": 4
+  },
+  {
+    "detector": "transient-storage-composability",
+    "count": 4
+  },
+  {
+    "detector": "unchecked-math",
+    "count": 4
+  },
+  {
+    "detector": "unchecked-send-return",
+    "count": 4
+  },
+  {
+    "detector": "aa-session-key-vulnerabilities",
+    "count": 3
+  },
+  {
+    "detector": "erc777-reentrancy-hooks",
+    "count": 3
+  },
+  {
+    "detector": "erc7821-replay-protection",
+    "count": 3
+  },
+  {
+    "detector": "integer-overflow",
+    "count": 3
+  },
+  {
+    "detector": "intent-nonce-management",
+    "count": 3
+  },
+  {
+    "detector": "intent-settlement-validation",
+    "count": 3
+  },
+  {
+    "detector": "multi-role-confusion",
+    "count": 3
+  },
+  {
+    "detector": "proxy-upgrade-unprotected",
+    "count": 3
+  },
+  {
+    "detector": "zk-trusted-setup-bypass",
+    "count": 3
+  },
+  {
+    "detector": "aa-calldata-encoding-exploit",
+    "count": 2
+  },
+  {
+    "detector": "ai-agent-prompt-injection",
+    "count": 2
+  },
+  {
+    "detector": "delegation-loop",
+    "count": 2
+  },
+  {
+    "detector": "flashloan-governance-attack",
+    "count": 2
+  },
+  {
+    "detector": "gas-price-manipulation",
+    "count": 2
+  },
+  {
+    "detector": "missing-commit-reveal",
+    "count": 2
+  },
+  {
+    "detector": "missing-slippage-protection",
+    "count": 2
+  },
+  {
+    "detector": "privilege-escalation-paths",
+    "count": 2
+  },
+  {
+    "detector": "vault-donation-attack",
+    "count": 2
+  },
+  {
+    "detector": "zk-proof-malleability",
+    "count": 2
+  },
+  {
+    "detector": "ai-agent-decision-manipulation",
+    "count": 1
+  },
+  {
+    "detector": "ai-agent-resource-exhaustion",
+    "count": 1
+  },
+  {
+    "detector": "autonomous-contract-oracle-dependency",
+    "count": 1
+  },
+  {
+    "detector": "cross-rollup-atomicity",
+    "count": 1
+  },
+  {
+    "detector": "emergency-withdrawal-abuse",
+    "count": 1
+  },
+  {
+    "detector": "erc20-approve-race",
+    "count": 1
+  },
+  {
+    "detector": "erc20-infinite-approval",
+    "count": 1
+  },
+  {
+    "detector": "erc7821-msg-sender-validation",
+    "count": 1
+  },
+  {
+    "detector": "erc7821-token-approval",
+    "count": 1
+  },
+  {
+    "detector": "flash-loan-staking",
+    "count": 1
+  },
+  {
+    "detector": "oracle-staleness-heartbeat",
+    "count": 1
+  },
+  {
+    "detector": "plaintext-secret-storage",
+    "count": 1
+  },
+  {
+    "detector": "sandwich-attack",
+    "count": 1
+  },
+  {
+    "detector": "transient-storage-misuse",
+    "count": 1
+  },
+  {
+    "detector": "zk-recursive-proof-validation",
+    "count": 1
+  }
+]
