@@ -1,0 +1,123 @@
+{
+  "version": "1.10.12",
+  "timestamp": "2026-01-30T00:36:05.547287Z",
+  "findings": [
+    {
+      "detector_id": "time-locked-admin-bypass",
+      "message": "Timelock implementation incomplete - missing queue/schedule or execute functions",
+      "severity": "critical",
+      "location": {
+        "file": "./foundry-test/src/Governance.sol",
+        "line": 1,
+        "column": 1,
+        "length": 1443
+      },
+      "fix_suggestion": {
+        "description": "Implement complete timelock flow: propose→queue→wait(delay)→execute",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "flash-loan-governance-attack",
+      "message": "No minimum token holding period - flash-borrowed tokens can vote immediately",
+      "severity": "critical",
+      "location": {
+        "file": "./foundry-test/src/Governance.sol",
+        "line": 1,
+        "column": 1,
+        "length": 1443
+      },
+      "fix_suggestion": {
+        "description": "Require minimum token holding period (e.g., 7 days) before tokens can be used for voting",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "multisig-bypass",
+      "message": "Missing threshold validation (can be set to zero or exceed owner count)",
+      "severity": "medium",
+      "location": {
+        "file": "./foundry-test/src/Governance.sol",
+        "line": 0,
+        "column": 0,
+        "length": 20
+      },
+      "cwe": "CWE-347",
+      "fix_suggestion": {
+        "description": "Validate threshold: require(threshold > 0 && threshold <= ownerCount, \"Invalid threshold\"); Prevents unusable multi-sig configurations.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "emergency-pause-centralization",
+      "message": "Contract has centralized emergency pause functionality without multisig protection. A single compromised account can halt the entire system, creating a single point of failure.",
+      "severity": "medium",
+      "location": {
+        "file": "./foundry-test/src/MyToken.sol",
+        "line": 21,
+        "column": 0,
+        "length": 5
+      },
+      "cwe": "CWE-285",
+      "fix_suggestion": {
+        "description": "Implement multisig requirements for emergency functions, add time delays, or use decentralized governance for critical system controls.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "token-supply-manipulation",
+      "message": "Function '' has token supply manipulation vulnerability. Mint function lacks maximum supply cap, enables unlimited token minting and hyperinflation Improper supply controls can lead to unlimited minting, hyperinflation, or complete token devaluation.",
+      "severity": "critical",
+      "location": {
+        "file": "./foundry-test/src/MyToken.sol",
+        "line": 13,
+        "column": 5,
+        "length": 0
+      },
+      "cwe": "CWE-682",
+      "fix_suggestion": {
+        "description": "Fix token supply controls in ''. Implement maximum supply cap, add minting rate limits, require multi-signature for minting, add supply change events, validate burn amounts, and implement supply monitoring.",
+        "replacements": []
+      }
+    },
+    {
+      "detector_id": "token-supply-manipulation",
+      "message": "Function 'mint' has token supply manipulation vulnerability. Mint function lacks maximum supply cap, enables unlimited token minting and hyperinflation Improper supply controls can lead to unlimited minting, hyperinflation, or complete token devaluation.",
+      "severity": "critical",
+      "location": {
+        "file": "./foundry-test/src/MyToken.sol",
+        "line": 29,
+        "column": 14,
+        "length": 4
+      },
+      "cwe": "CWE-682",
+      "fix_suggestion": {
+        "description": "Fix token supply controls in 'mint'. Implement maximum supply cap, add minting rate limits, require multi-signature for minting, add supply change events, validate burn amounts, and implement supply monitoring.",
+        "replacements": []
+      }
+    }
+  ],
+  "metadata": {
+    "tool_name": "SolidityDefend",
+    "tool_version": "1.10.12",
+    "scan_type": "static_analysis",
+    "language": "solidity",
+    "rules_version": "1.10.12",
+    "branding": {
+      "name": "BlockSecOps",
+      "url": "https://BlockSecOps.com",
+      "description": "Enterprise-Grade DevSecOps Platform for Smart Contracts"
+    }
+  },
+  "statistics": {
+    "total_findings": 6,
+    "severity_counts": {
+      "info": 0,
+      "high": 0,
+      "critical": 4,
+      "medium": 2,
+      "low": 0
+    },
+    "unique_detectors": 5
+  }
+}
